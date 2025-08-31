@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mera Pro';
+    src: url('/fonts/MeraPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url('/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Varela Round';
+    src: url('/fonts/VarelaRound-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@theme {
+    --font-merapro: 'Mera Pro', sans-serif;
+    --font-exo2: 'Exo 2', sans-serif;
+    --font-verelaRound: 'Varela Round', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+body {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/* Navbar */
+
+.nav-shadow {
+    box-shadow: -0.5px -0.5px 0.5px 0 rgba(0, 0, 0, 0.25) inset, 1px 1px 1px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+
+/* Hide scrollbar but keep scroll functionality */
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/* Navbar */
+
+.side-navbar {
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    /* padding-top: 60px; */
+    padding-inline: 20px;
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+}
+
+.side-navbar.show {
+    transform: translateX(0);
+}
