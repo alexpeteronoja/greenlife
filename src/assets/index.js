@@ -1,5 +1,5 @@
 import moutainBg from './Mountain.webp';
-import overlay from './Overlay.webp';
+import overlay from './overlay.webp';
 import logo from './GreenLife-logo-white-new 1.png';
 import searchLogo from './ri_search-line.svg';
 import greenlifeTextIcon from './Greenlife.svg';
