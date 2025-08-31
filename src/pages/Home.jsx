@@ -14,7 +14,7 @@ import {
 } from '../assets';
 import QualityandAbout from '../components/QualityandAbout';
 import Navbar from '../components/Navbar';
-import SecondHeroSection from '../components/secondHeroSection';
+import SecondHeroSection from '../components/SecondHeroSection';
 import blogData from '../data/BlogData';
 import Footer from '../components/Footer';
 
