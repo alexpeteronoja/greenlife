@@ -1,9 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { blackLogo, searchLogo } from '../assets';
 
 function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navStyle = ({ isActive }) => ({
+    color: isActive ? '#12BA09' : 'black',
+  });
+
   return (
     <>
       <nav className="mx-3 md:mx-5 pt-8">
@@ -21,27 +26,44 @@ function Navbar(props) {
 
               {/* Navigation Links (Desktop) */}
               <div className="hidden lg:flex space-x-6 font-medium">
-                <Link to="/" className=" hover:text-blue-500">
+                <NavLink
+                  to="/"
+                  style={navStyle}
+                  className=" hover:text-blue-500"
+                >
                   Home
-                </Link>
-                <Link to="/products" className="hover:text-blue-500">
+                </NavLink>
+                <NavLink
+                  to="/products"
+                  style={navStyle}
+                  className="hover:text-blue-500"
+                >
                   Products
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/about"
+                  style={navStyle}
                   state={{ scrollTo: 'project-section' }}
                   className="hover:text-blue-500"
                 >
                   About us
-                </Link>
+                </NavLink>
 
-                <Link to="/blog" className="hover:text-blue-500">
+                <NavLink
+                  to="/blog"
+                  style={navStyle}
+                  className="hover:text-blue-500"
+                >
                   Blog
-                </Link>
+                </NavLink>
 
-                <Link to="/contact" className="hover:text-blue-500">
+                <NavLink
+                  to="/contact"
+                  style={navStyle}
+                  className="hover:text-blue-500"
+                >
                   Contact us
-                </Link>
+                </NavLink>
               </div>
 
               <div className="hidden md:block">
@@ -104,22 +126,35 @@ function Navbar(props) {
               </button>
             </div>
 
-            <Link to="/" className="block  hover:text-blue-500 py-3">
+            <NavLink
+              to="/"
+              style={navStyle}
+              className="block  hover:text-blue-500 py-3"
+            >
               Home
-            </Link>
-            <Link to="/about" className="block  hover:text-blue-500  py-3">
+            </NavLink>
+            <NavLink
+              to="/about"
+              style={navStyle}
+              className="block  hover:text-blue-500  py-3"
+            >
               About
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/products"
+              style={navStyle}
               state={{ scrollTo: 'project-section' }}
               className="block  hover:text-blue-500  py-3"
             >
               Project
-            </Link>
-            <Link to="/contact" className="block  hover:text-blue-500  py-3">
+            </NavLink>
+            <NavLink
+              to="/contact"
+              style={navStyle}
+              className="block  hover:text-blue-500  py-3"
+            >
               Contact
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>
