@@ -14,7 +14,7 @@ import {
 } from '../assets';
 import QualityandAbout from '../components/QualityandAbout';
 import Navbar from '../components/Navbar';
-import SecondHeroSection from '../components/SecondHeroSection';
+// import SecondHeroSection from '../components/SecondHeroSection';
 import blogData from '../data/BlogData';
 import Footer from '../components/Footer';
 
@@ -33,7 +33,7 @@ function Home() {
 
         {/* Navbar */}
 
-        <div className="z-20">
+        <div className="z-20 right-0 left-0">
           <Navbar navStyle="bg-[#FFFFFF1A] text-white" />
         </div>
 

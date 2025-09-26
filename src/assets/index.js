@@ -107,6 +107,7 @@ import aboutPost2 from './a-close-up-shot-of-a-pharmaceutical-packaging.png';
 import aboutPost3 from './a-healthcare-worker-providing-medical-check-ups.png';
 import aboutPost4 from './a-scientist-in-a-dark-laboratory-looking.png';
 import rightTypeArrow from './right-type-arrow.png';
+import tiktokLogo from './tiktok-brands-solid-full.svg';
 
 export {
     moutainBg,
@@ -141,6 +142,7 @@ export {
     materialSymbol,
     facebookLogo,
     instagramLogo,
+    tiktokLogo,
     twitterLogo,
     linkedInLogo,
     youtubeLogo,

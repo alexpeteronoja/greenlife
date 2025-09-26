@@ -6,7 +6,7 @@ function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navStyle = ({ isActive }) => ({
-    color: isActive ? '#12BA09' : 'black',
+    color: isActive ? '#12BA09' : '',
   });
 
   return (

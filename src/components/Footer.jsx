@@ -2,10 +2,11 @@ import {
   blackLogo,
   facebookLogo,
   instagramLogo,
-  linkedInLogo,
+  // linkedInLogo,
   materialSymbol,
+  tiktokLogo,
   twitterLogo,
-  youtubeLogo,
+  // youtubeLogo,
 } from '../assets';
 
 function Footer() {
@@ -99,20 +100,44 @@ function Footer() {
 
             <div className="flex justify-center lg:justify-start items-center gap-x-5">
               <div>
-                <img src={facebookLogo} alt="" className="w-6" />
+                <a
+                  href="https://www.facebook.com/share/1SJ14c4CjS/?mibextid=wwXIfr"
+                  target="_blank"
+                >
+                  <img src={facebookLogo} alt="" className="w-6" />
+                </a>
               </div>
               <div>
-                <img src={instagramLogo} alt="" />
+                <a
+                  href="https://www.instagram.com/greenlifepharmofficial?igsh=MXZlZm1yMjU5ejRj&utm_source=qr"
+                  target="_blank"
+                >
+                  <img src={instagramLogo} alt="" />
+                </a>
               </div>
               <div>
-                <img src={twitterLogo} alt="" />
+                <a href="https://x.com/pharm_greenlife?s=21" target="_blank">
+                  <img src={twitterLogo} alt="" />
+                </a>
               </div>
               <div>
-                <img src={linkedInLogo} alt="" />
+                <a
+                  href="https://www.tiktok.com/@greenlifepharmofficials?_t=ZM-8xkWZOeXa57&_r=1"
+                  target="_blank"
+                >
+                  <img src={tiktokLogo} alt="" className="w-6" />
+                </a>
+              </div>
+              {/* <div>
+                <a href="">
+                  <img src={linkedInLogo} alt="" />
+                </a>
               </div>
               <div>
-                <img src={youtubeLogo} alt="" />
-              </div>
+                <a href="">
+                  <img src={youtubeLogo} alt="" />
+                </a>
+              </div> */}
             </div>
           </div>
         </div>
