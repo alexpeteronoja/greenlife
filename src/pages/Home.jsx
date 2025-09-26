@@ -62,7 +62,7 @@ function Home() {
         </div>
       </div>
 
-      <SecondHeroSection />
+      {/* <SecondHeroSection /> */}
 
       {/* Product Category */}
 
@@ -75,11 +75,11 @@ function Home() {
           Discover our range of effective healthcare solutions.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mx-8 mt-8 pb-18">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch mx-8 mt-8 pb-18">
           {/* First Section */}
 
           <div className="">
-            <div className="bg-white py-12">
+            <div className="bg-white pt-12">
               <div className="px-12 pb-12">
                 <p>Antibiotics</p>
                 <p className="text-4xl mt-2 mb-6">
@@ -175,7 +175,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="bg-white py-12 mt-8">
+            <div className="bg-white pt-12 mt-8">
               <div className="px-12 pb-12">
                 <p>Trusted</p>
                 <p className="text-4xl mt-2 mb-6">Partner with Us Today!</p>

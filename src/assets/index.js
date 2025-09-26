@@ -101,6 +101,12 @@ import blogPostImage3 from './blogpostimage_03.webp';
 import blogPostImage4 from './blogpostimage_04.webp';
 import imgPost from './imgpost.png';
 import imgPost1 from './imgpost-1.png';
+import dotIcon from './dot-icon.png';
+import aboutPost1 from './a-clean-modern-pharmaceutical-manufacturing-facility.png';
+import aboutPost2 from './a-close-up-shot-of-a-pharmaceutical-packaging.png';
+import aboutPost3 from './a-healthcare-worker-providing-medical-check-ups.png';
+import aboutPost4 from './a-scientist-in-a-dark-laboratory-looking.png';
+import rightTypeArrow from './right-type-arrow.png';
 
 export {
     moutainBg,
@@ -206,4 +212,10 @@ export {
     blogPostImage4,
     imgPost,
     imgPost1,
+    dotIcon,
+    aboutPost1,
+    aboutPost2,
+    aboutPost3,
+    aboutPost4,
+    rightTypeArrow,
 };

@@ -11,15 +11,13 @@ import {
   certifiation8,
   certifiation9,
   countriesFrame,
-  heartHandshakeIcon,
-  image5,
-  image6,
-  image7,
-  lightbulbIcon,
-  workFlowIcon,
 } from '../assets';
+import AreaOfFocusCard from '../components/AboutCom/AreaOfFocusCard';
+import OurCoreValues from '../components/AboutCom/OurCoreValues';
+import OurJourney from '../components/AboutCom/OurJourney';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import AreaOfFocusData from '../data/AreaOfFocusData';
 import ExperienceData from '../data/ExperienceData';
 import LeadershipData from '../data/LeadershipData';
 
@@ -93,9 +91,11 @@ function About() {
         </div>
       </div>
 
+      <OurJourney />
+
       {/* Vision & Mission Section */}
 
-      <div className="bg-[#F7F7F74D] px-8 pb-24">
+      {/* <div className="bg-[#F7F7F74D] px-8 pb-24">
         <p className="pt-21 text-3xl md:text-4xl font-bold text-center">
           Our Vision, Mission & Purpose
         </p>
@@ -146,11 +146,11 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Milestore Section */}
 
-      <div className="my-13 mx-8">
+      {/* <div className="my-13 mx-8">
         <p className="text-3xl md:text-4xl font-bold text-center">
           Our Journey: Milestones
         </p>
@@ -222,7 +222,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Leadership Section */}
 
@@ -254,11 +254,34 @@ function About() {
         </div>
       </div>
 
+      {/* Our Core Values */}
+
+      <OurCoreValues />
+
+      {/* Area of Focus */}
+
+      <div className="px-8 pb-24 font-inter">
+        <p className="pt-21 pb-4 text-3xl md:text-4xl font-bold text-center">
+          Areas of Focus
+        </p>
+
+        <p className="text-center max-w-[756px] mx-auto">
+          We concentrate our expertise and resources on key areas where we can
+          make the most significant impact on healthcare in West Africa.
+        </p>
+
+        <div className="mt-9 grid md:grid-cols-2 gap-x-14 gap-y-11">
+          {AreaOfFocusData.map(product => (
+            <AreaOfFocusCard key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
+
       {/* Certification Section */}
 
       <div className="mx-8 my-15">
         <p className="text-[#242524] text-4xl font-bold text-center">
-          Certifications & Partnerships
+          Other Brands
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 mt-[70px] justify-items-center w-full">
