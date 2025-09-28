@@ -1,4 +1,4 @@
-import { placeholder33 } from '../assets';
+import { placeholder33, placeholder40 } from '../assets';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
@@ -6,7 +6,7 @@ function BlogPage() {
   return (
     <>
       <Navbar navStyle="bg-[#AFAFAE1A] text-black" />
-      <div className="grid md:grid-cols-[60%_40%] gap-10 px-8 py-12">
+      <div className="grid lg:grid-cols-[3fr_2fr] gap-10 px-8 py-12">
         <div className="">
           <h1 className="text-xl md:text-3xl font-bold mb-6">
             Understanding Drug Development: A Deep Dive into the Drug Creation
@@ -84,10 +84,10 @@ function BlogPage() {
         </div>
 
         <div>
-          <h2 className="text-xl md:text-3xl font-bold mb-6">Related</h2>
+          <h2 className="text-xl  font-bold mb-6">Related</h2>
 
           <div className="flex gap-x-5">
-            <div>
+            <div className="shrink-0">
               <img
                 src={placeholder33}
                 alt=""
@@ -96,11 +96,29 @@ function BlogPage() {
             </div>
 
             <div className=" ">
-              <p className="font-semibold md:text-lg">
-                Understanding Drug Development
-              </p>
+              <p className="font-semibold ">Understanding Drug Development</p>
               <p className="text-wrap">
                 A deep dive into the drug creation process.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-x-5 mt-5">
+            <div className="shrink-0">
+              <img
+                src={placeholder40}
+                alt=""
+                className="w-full max-w-[150px]"
+              />
+            </div>
+
+            <div className=" ">
+              <p className="font-semibold md:text-lg">
+                Greenlife's New Initiatives
+              </p>
+              <p className="text-wrap">
+                Discover our latest programs aimed at improving healthcare
+                access.
               </p>
             </div>
           </div>
