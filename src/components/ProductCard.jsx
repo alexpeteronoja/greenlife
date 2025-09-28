@@ -21,7 +21,7 @@ function ProductCard({ product }) {
             </p>
           </div>
 
-          <div className="mt-4 flex flex-col lg:flex-row justify-between items-center gap-4">
+          <div className="mt-4 flex flex-col xl:flex-row justify-between items-center gap-4">
             <button className="py-2.5 px-4 w-full  rounded-[10px] border text-sm border-[#12BA09] text-[#12BA09] whitespace-nowrap">
               Buy Now
             </button>

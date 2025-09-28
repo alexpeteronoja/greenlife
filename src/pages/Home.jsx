@@ -11,12 +11,14 @@ import {
   mapLogo,
   mapImg,
   rectangle,
+  blackLogo,
 } from '../assets';
 import QualityandAbout from '../components/QualityandAbout';
 import Navbar from '../components/Navbar';
 // import SecondHeroSection from '../components/SecondHeroSection';
 import blogData from '../data/BlogData';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -75,72 +77,53 @@ function Home() {
           Discover our range of effective healthcare solutions.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch mx-8 mt-8 pb-18">
+        <div className="grid lg:grid-cols-2 gap-8  mx-8 mt-8 pb-18">
           {/* First Section */}
 
-          <div className="">
-            <div className="bg-white pt-12">
-              <div className="px-12 pb-12">
-                <p>Antibiotics</p>
-                <p className="text-4xl mt-2 mb-6">
-                  Effective Solutions for Infections
-                </p>
-                <p>
-                  Combat bacterial infections with our trusted antibiotics,
-                  ensuring quick recovery and health restoration.
-                </p>
+          <div className="row-span-2 bg-white pt-12">
+            <div className="px-12 pb-12">
+              <p>Antibiotics</p>
+              <p className="text-4xl mt-2 mb-6">
+                Effective Solutions for Infections
+              </p>
+              <p>
+                Combat bacterial infections with our trusted antibiotics,
+                ensuring quick recovery and health restoration.
+              </p>
 
-                <div className="flex items-center gap-x-6 mt-8">
-                  <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
-                    Learn
-                  </button>
-                  <button className="flex justify-center items-center text-[#12BA09]">
-                    <p className="font-medium">View Products</p>
-                    <div>
-                      <img src={righArrow} alt="" />
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <div>
-                <img src={productImage} alt="" className="w-full" />
+              <div className="flex items-center gap-x-6 mt-8">
+                <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
+                  Learn
+                </button>
+                <button className="flex justify-center items-center text-[#12BA09]">
+                  <p className="font-medium">View Products</p>
+                  <div>
+                    <img src={righArrow} alt="" />
+                  </div>
+                </button>
               </div>
             </div>
+            <div>
+              <img src={productImage} alt="" className="w-full" />
+            </div>
+          </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-x-4  md:gap-x-8">
-              <div className="bg-white p-6">
-                <div>
-                  <img src={prescritpion} alt="" />
-                </div>
+          {/* Second Section */}
 
-                <p className="text-base md:text-lg font-bold lg:text-2xl mt-2 mb-3 lg:mb-1">
-                  Comprehensive Anti-Fungal Treatments
-                </p>
-                <p>Protect against fungal infections effectively and safely.</p>
+          <div className="grid grid-cols-2 bg-white">
+            <div>
+              <img src={placeholder5} alt="" className="w-full h-full" />
+            </div>
 
-                <div className="mt-2">
+            <div className="p-6">
+              <div>
+                <p>Quality</p>
+                <p className="text-2xl my-2">Why Choose Our Products?</p>
+                <p>Experience quality and reliability in every product.</p>
+
+                <div className="mt-6">
                   <button className="flex justify-center items-center text-[#12BA09]">
-                    <p className="font-medium">Discover</p>
-                    <div>
-                      <img src={righArrow} alt="" />
-                    </div>
-                  </button>
-                </div>
-              </div>
-
-              <div className="bg-white p-6">
-                <div>
-                  <img src={prescritpion} alt="" />
-                </div>
-
-                <p className="font-bold text-base md:text-lg lg:text-2xl mt-2 mb-3 lg:mb-1">
-                  Powerful Anti-Malarial Solutions
-                </p>
-                <p>Fight malaria with our proven treatment options.</p>
-
-                <div className="mt-2">
-                  <button className="flex justify-center items-center text-[#12BA09]">
-                    <p className="font-medium">Explore</p>
+                    <p className="font-medium">Join</p>
                     <div>
                       <img src={righArrow} alt="" />
                     </div>
@@ -149,55 +132,74 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* second Section */}
 
-          <div>
-            <div className="grid grid-cols-2 bg-white">
+          {/* Third Section */}
+
+          <div className="row-span-2 bg-white pt-12 mt-8">
+            <div className="px-12 pb-12">
+              <p>Trusted</p>
+              <p className="text-4xl mt-2 mb-6">Partner with Us Today!</p>
+              <p>
+                Become a vendor and help us make healthcare accessible for
+                everyone.
+              </p>
+
+              <div className="flex items-center gap-x-6 mt-8">
+                <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
+                  Join
+                </button>
+                <button className="flex justify-center items-center text-[#12BA09]">
+                  <p className="font-medium">Contact</p>
+                  <div>
+                    <img src={righArrow} alt="" />
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div>
+              <img src={placeholder6} alt="" className="w-full" />
+            </div>
+          </div>
+
+          {/* Fourth Section */}
+          <div className="mt-8 grid grid-cols-2 gap-x-4  md:gap-x-8">
+            <div className="bg-white p-6">
               <div>
-                <img src={placeholder5} alt="" className="w-full h-full" />
+                <img src={prescritpion} alt="" />
               </div>
 
-              <div className="p-6">
-                <div>
-                  <p>Quality</p>
-                  <p className="text-2xl my-2">Why Choose Our Products?</p>
-                  <p>Experience quality and reliability in every product.</p>
+              <p className="text-base md:text-lg font-bold lg:text-2xl mt-2 mb-3 lg:mb-1">
+                Comprehensive Anti-Fungal Treatments
+              </p>
+              <p>Protect against fungal infections effectively and safely.</p>
 
-                  <div className="mt-6">
-                    <button className="flex justify-center items-center text-[#12BA09]">
-                      <p className="font-medium">Join</p>
-                      <div>
-                        <img src={righArrow} alt="" />
-                      </div>
-                    </button>
+              <div className="mt-2">
+                <button className="flex justify-center items-center text-[#12BA09]">
+                  <p className="font-medium">Discover</p>
+                  <div>
+                    <img src={righArrow} alt="" />
                   </div>
-                </div>
+                </button>
               </div>
             </div>
 
-            <div className="bg-white pt-12 mt-8">
-              <div className="px-12 pb-12">
-                <p>Trusted</p>
-                <p className="text-4xl mt-2 mb-6">Partner with Us Today!</p>
-                <p>
-                  Become a vendor and help us make healthcare accessible for
-                  everyone.
-                </p>
-
-                <div className="flex items-center gap-x-6 mt-8">
-                  <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
-                    Join
-                  </button>
-                  <button className="flex justify-center items-center text-[#12BA09]">
-                    <p className="font-medium">Contact</p>
-                    <div>
-                      <img src={righArrow} alt="" />
-                    </div>
-                  </button>
-                </div>
-              </div>
+            <div className="bg-white p-6">
               <div>
-                <img src={placeholder6} alt="" className="w-full" />
+                <img src={prescritpion} alt="" />
+              </div>
+
+              <p className="font-bold text-base md:text-lg lg:text-2xl mt-2 mb-3 lg:mb-1">
+                Powerful Anti-Malarial Solutions
+              </p>
+              <p>Fight malaria with our proven treatment options.</p>
+
+              <div className="mt-2">
+                <button className="flex justify-center items-center text-[#12BA09]">
+                  <p className="font-medium">Explore</p>
+                  <div>
+                    <img src={righArrow} alt="" />
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -222,15 +224,20 @@ function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 my-20">
           {blogData.map(item => (
             <div>
-              <img
-                src={item.image}
-                alt=""
-                className="h-[300px] w-full object-cover"
-              />
+              <Link to="/blogpost">
+                <img
+                  src={item.image}
+                  alt=""
+                  className="h-[300px] w-full object-cover"
+                />
+              </Link>
+
               <div className="my-6">
                 <p>{item.category}</p>
-                <p className="font-verelaRound text-2xl mt-2">{item.title}</p>
-                <p className="font-exo2">{item.description}</p>
+                <Link to="/blogpost">
+                  <p className="font-verelaRound text-2xl mt-2">{item.title}</p>
+                  <p className="font-exo2">{item.description}</p>
+                </Link>
               </div>
 
               <div className="flex gap-x-4 font-exo2 text-sm">
@@ -262,6 +269,10 @@ function Home() {
       </div>
 
       {/* Contact Section */}
+
+      <div>
+        <img src={blackLogo} alt="" className="mx-auto" />
+      </div>
 
       <div className="relative my-16">
         <div className="flex justify-end">

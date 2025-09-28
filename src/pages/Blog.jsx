@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { blogRightArrow, imageTray, leftArrow, righArrow } from '../assets';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -89,18 +90,20 @@ function Blog() {
             {blogpPost24.map(item => (
               <div className=" bg-white">
                 <div>
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-full max-w-[305px]"
-                  />
+                  <Link to="/blogpost">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-full max-w-[305px]"
+                    />
+                  </Link>
                 </div>
                 <div className="my-2">
                   <p className="px-2 py-1 bg-[#54B9471A] rounded-full text-[#54B947] inline-block font-medium text-sm">
                     {item.category}
                   </p>
                   <p className="mt-4.5 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
-                    {item.title}
+                    <Link to="/blogpost">{item.title}</Link>
                   </p>
                   <p className="mb-2 text-[#8C8D8B] text-sm">
                     {item.datePosted}
@@ -119,18 +122,20 @@ function Blog() {
             {blogpPost23.map(item => (
               <div className=" bg-white">
                 <div>
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-full max-w-[305px]"
-                  />
+                  <Link to="/blogpost">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-full max-w-[305px]"
+                    />
+                  </Link>
                 </div>
                 <div className="my-2">
                   <p className="px-2 py-1 bg-[#54B9471A] rounded-full text-[#54B947] inline-block font-medium text-sm">
                     {item.category}
                   </p>
                   <p className="mt-4.5 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
-                    {item.title}
+                    <Link to="/blogpost">{item.title}</Link>
                   </p>
                   <p className="mb-2 text-[#8C8D8B] text-sm">July 15, 2024</p>
                   <p className="text-[#8C8D8B] text-sm">{item.description}</p>
@@ -147,18 +152,20 @@ function Blog() {
             {blogpPost22.map(item => (
               <div className=" bg-white">
                 <div>
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-full max-w-[305px]"
-                  />
+                  <Link to="/blogpost">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-full max-w-[305px]"
+                    />
+                  </Link>
                 </div>
                 <div className="my-2">
                   <p className="px-2 py-1 bg-[#54B9471A] rounded-full text-[#54B947] inline-block font-medium text-sm">
                     {item.category}
                   </p>
                   <p className="mt-4.5 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
-                    {item.title}
+                    <Link to="/blogpost">{item.title}</Link>
                   </p>
                   <p className="mb-2 text-[#8C8D8B] text-sm">
                     {item.datePosted}

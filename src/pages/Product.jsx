@@ -13,7 +13,7 @@ import ProductData from '../data/ProductData';
 function Product() {
   return (
     <>
-      <div className="">
+      <div>
         <Navbar navStyle="bg-[#AFAFAE1A] text-black" />
       </div>
 
