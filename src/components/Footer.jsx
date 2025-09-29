@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   blackLogo,
   facebookLogo,
@@ -48,11 +49,47 @@ function Footer() {
               <div>
                 <p className="mb-4 font-semibold">Quick Links</p>
                 <div className="space-y-4">
-                  <p>Home Page</p>
-                  <p>Our Products</p>
-                  <p>About Us</p>
-                  <p>Contact Us</p>
-                  <p>Blog Posts</p>
+                  <p>
+                    <Link
+                      to="/"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Home Page
+                    </Link>
+                  </p>
+                  <p>
+                    <Link
+                      to="/products"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Our Products
+                    </Link>
+                  </p>
+                  <p>
+                    <Link
+                      to="/about"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      {' '}
+                      About Us
+                    </Link>
+                  </p>
+                  <p>
+                    <Link
+                      to="/contact"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Contact Us
+                    </Link>
+                  </p>
+                  <p>
+                    <Link
+                      to="/blog"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Blog Posts
+                    </Link>
+                  </p>
                 </div>
               </div>
 
@@ -70,9 +107,30 @@ function Footer() {
               <div>
                 <p className="mb-4 font-semibold">Legal</p>
                 <div className="space-y-4">
-                  <p>Privacy Policy</p>
-                  <p>Terms of Use</p>
-                  <p>Cookie Settings</p>
+                  <p>
+                    <Link
+                      to="/privacy-policy"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Privacy Policy
+                    </Link>
+                  </p>
+                  <p>
+                    <Link
+                      to="/term-of-use"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Terms of Use
+                    </Link>
+                  </p>
+                  <p>
+                    <Link
+                      to="/cookie-policy"
+                      className="hover:text-indigo-600 hover:underline"
+                    >
+                      Cookie Settings
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>

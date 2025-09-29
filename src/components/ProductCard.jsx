@@ -5,7 +5,7 @@ function ProductCard({ product }) {
   return (
     <>
       <div>
-        <div className="relative h-full py-8 px-6 border border-[#EBEBEA] rounded-lg shadow-[0_0_2px_0_#171a1f1f,0_0_1px_0_#171a1f12]">
+        <div className="relative h-full py-8 px-3 md:px-6 border border-[#EBEBEA] rounded-lg shadow-[0_0_2px_0_#171a1f1f,0_0_1px_0_#171a1f12]">
           <div>
             <img
               src={product.image}
@@ -14,10 +14,10 @@ function ProductCard({ product }) {
             />
           </div>
           <div className="mt-5">
-            <p className="text-lg font-semibold mt-0.5">{product.title}</p>
+            <p className="md:text-lg font-semibold mt-0.5">{product.title}</p>
             <p>{product.description}</p>
             <p className="text-[#12BA09] text-2xl font-bold  mt-2.5">
-              ₦{product.price}
+              ₦{product.price.toLocaleString('en-Ng')}
             </p>
           </div>
 
@@ -27,7 +27,7 @@ function ProductCard({ product }) {
             </button>
 
             <button className="flex items-center w-full  justify-center gap-x-2.5 text-sm text-white py-2.5 px-4 rounded-[10px] bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
-              <img src={buttoncart} alt="" />
+              <img src={buttoncart} alt="" className="hidden md:block" />
               <span className="text-sm whitespace-nowrap">Add to Cart</span>
             </button>
           </div>

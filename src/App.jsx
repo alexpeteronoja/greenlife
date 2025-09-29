@@ -8,6 +8,9 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import BlogPage from './pages/BlogPage';
 import ScrollToTop from './components/ScrollToTop';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermOfUse from './pages/TermOfUse';
+import CookiePolicy from './pages/CookiePolicy';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogpost" element={<BlogPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/term-of-use" element={<TermOfUse />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
           </Routes>
         </Router>
       </div>

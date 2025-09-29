@@ -18,7 +18,7 @@ function Product() {
       </div>
 
       <div>
-        <p className="pt-5 text-center text-4xl mb-16">
+        <p className="pt-5 text-center text-3xl md:text-4xl mb-10 md:mb-16">
           Explore Our Product Categories
         </p>
 
@@ -40,7 +40,7 @@ function Product() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="text-2xl font-bold text-center md:text-start">
+                <p className="text-lg md:text-2xl font-bold text-center md:text-start">
                   GreenRelief Pain Capsules
                 </p>
                 <p className="text-[#8C8D8B] mt-2 mb-3.5">
@@ -53,7 +53,7 @@ function Product() {
                 </p>
               </div>
 
-              <div className="mt-4 flex justify-center md:justify-start items-center gap-x-4">
+              <div className="mt-4 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4">
                 <button className="py-2.5 px-6 rounded-md border border-[#12BA09] text-[#12BA09]">
                   Buy Now
                 </button>
@@ -79,7 +79,7 @@ function Product() {
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="text-2xl font-bold text-center md:text-start">
+                <p className="text-lg md:text-2xl font-bold text-center md:text-start">
                   GreenRelief Pain Capsules
                 </p>
                 <p className="text-[#8C8D8B] mt-2 mb-3.5">
@@ -92,7 +92,7 @@ function Product() {
                 </p>
               </div>
 
-              <div className="mt-4 flex justify-center md:justify-start items-center gap-x-4">
+              <div className="mt-4 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4">
                 <button className="py-2.5 px-6 rounded-md border border-[#12BA09] text-[#12BA09]">
                   Buy Now
                 </button>
@@ -121,7 +121,7 @@ function Product() {
           <div>Anti-Malarials</div>
         </div>
 
-        <p className="text-4xl font-bold text-center mt-5 mb-12">
+        <p className="text-2xl md:text-4xl font-bold text-center mt-5 mb-12">
           All GreenLife Products
         </p>
 
