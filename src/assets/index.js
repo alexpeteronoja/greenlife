@@ -109,6 +109,7 @@ import aboutPost4 from './a-scientist-in-a-dark-laboratory-looking.png';
 import rightTypeArrow from './right-type-arrow.png';
 import tiktokLogo from './tiktok-brands-solid-full.svg';
 import shoppingCart from './shopping-cart.svg';
+import cancelIcon from './xmark-solid-full.svg';
 
 export {
   moutainBg,
@@ -222,4 +223,5 @@ export {
   aboutPost4,
   rightTypeArrow,
   shoppingCart,
+  cancelIcon,
 };

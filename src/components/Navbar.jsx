@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { blackLogo, searchLogo } from '../assets';
+import { blackLogo, cancelIcon, searchLogo } from '../assets';
 
 function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,13 +117,11 @@ function Navbar(props) {
             id="mobile-sidebar"
             className={`xl:hidden side-navbar ${isOpen ? 'show' : ''} w-64`}
           >
-            <div className="flex justify-end">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="mt-8 mb-2 flex justify-end cursor-pointer "
-              >
-                <i className="fa-solid fa-xmark fa-lg "></i>
-              </button>
+            <div
+              onClick={() => setIsOpen(false)}
+              className="mt-8 mb-2 flex justify-end cursor-pointer"
+            >
+              <img src={cancelIcon} alt="" className="w-7" />
             </div>
 
             <NavLink
@@ -133,6 +131,15 @@ function Navbar(props) {
             >
               Home
             </NavLink>
+
+            <NavLink
+              to="/products"
+              style={navStyle}
+              state={{ scrollTo: 'project-section' }}
+              className="block  hover:text-blue-500  py-3"
+            >
+              Product
+            </NavLink>
             <NavLink
               to="/about"
               style={navStyle}
@@ -140,20 +147,22 @@ function Navbar(props) {
             >
               About
             </NavLink>
+
             <NavLink
-              to="/products"
+              to="/blog"
               style={navStyle}
               state={{ scrollTo: 'project-section' }}
               className="block  hover:text-blue-500  py-3"
             >
-              Project
+              Blog
             </NavLink>
+
             <NavLink
               to="/contact"
               style={navStyle}
               className="block  hover:text-blue-500  py-3"
             >
-              Contact
+              Contact us
             </NavLink>
           </div>
         </div>
