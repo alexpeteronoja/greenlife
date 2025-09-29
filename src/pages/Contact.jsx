@@ -25,7 +25,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-14 mt-21 mb-24 mx-8">
+      <div className="grid md:grid-cols-2 gap-14 mt-10 md:mt-21 mb-24 mx-8">
         {/* First Section */}
         <div className="font-inter p-10 rounded-xl shadow-[0_0_2px_0_#171A1F1F,_0_0_1px_0_#171A1F12]">
           <p className="text-[#242524] text-2xl md:text-3xl font-bold">
