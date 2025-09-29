@@ -45,7 +45,7 @@ function Footer() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-x-10 justify-center lg:justify-start flex-1">
+            <div className="grid grid-cols-2 gap-x-10 justify-center lg:justify-start flex-1">
               <div>
                 <p className="mb-4 font-semibold">Quick Links</p>
                 <div className="space-y-4">
@@ -93,7 +93,7 @@ function Footer() {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <p className="mb-4 font-semibold">Connect With Us</p>
                 <div className="space-y-4">
                   <p>Careers</p>
@@ -102,7 +102,7 @@ function Footer() {
                   <p>Support Center</p>
                   <p>Feedback</p>
                 </div>
-              </div>
+              </div> */}
 
               <div>
                 <p className="mb-4 font-semibold">Legal</p>

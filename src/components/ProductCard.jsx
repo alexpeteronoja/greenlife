@@ -5,19 +5,33 @@ function ProductCard({ product }) {
   return (
     <>
       <div>
-        <div className="relative h-full py-8 px-3 md:px-6 border border-[#EBEBEA] rounded-lg shadow-[0_0_2px_0_#171a1f1f,0_0_1px_0_#171a1f12]">
-          <div>
+        <div className=" h-full py-8 px-3 md:px-6 border border-[#EBEBEA] rounded-lg shadow-[0_0_2px_0_#171a1f1f,0_0_1px_0_#171a1f12]">
+          <div className="relative">
             <img
               src={product.image}
               alt=""
               className="object-cover w-full h-full max-w-[292px] max-h-[192px]"
             />
+
+            {/* Best Seller */}
+            {product.bestSeller && (
+              <div className="absolute top-[-8px] left-0 bg-[#E8618C] py-0.5 px-3 inline rounded-[6px] text-white text-xs font-medium">
+                Best Seller
+              </div>
+            )}
+
+            {/* New Product */}
+            {product.newProduct && (
+              <div className="absolute top-[-8px] right-0 bg-[#12BA09] py-0.5 px-3 inline rounded-[6px] text-white text-xs font-medium">
+                New
+              </div>
+            )}
           </div>
           <div className="mt-5">
             <p className="md:text-lg font-semibold mt-0.5">{product.title}</p>
             <p>{product.description}</p>
-            <p className="text-[#12BA09] text-2xl font-bold  mt-2.5">
-              ₦{product.price.toLocaleString('en-Ng')}
+            <p className="text-[#12BA09] text-xl md:text-2xl font-bold mt-2.5">
+              ₦ {product.price.toLocaleString('en-Ng')}
             </p>
           </div>
 
@@ -31,20 +45,6 @@ function ProductCard({ product }) {
               <span className="text-sm whitespace-nowrap">Add to Cart</span>
             </button>
           </div>
-
-          {/* Best Seller */}
-          {product.bestSeller && (
-            <div className="absolute top-6 left-6 bg-[#E8618C] py-0.5 px-3 inline rounded-[6px] text-white text-xs font-medium">
-              Best Seller
-            </div>
-          )}
-
-          {/* New Product */}
-          {product.newProduct && (
-            <div className="absolute top-6 right-6 bg-[#12BA09] py-0.5 px-3 inline rounded-[6px] text-white text-xs font-medium">
-              New
-            </div>
-          )}
         </div>
       </div>
     </>

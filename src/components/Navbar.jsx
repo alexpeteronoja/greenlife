@@ -25,7 +25,7 @@ function Navbar(props) {
               </div>
 
               {/* Navigation Links (Desktop) */}
-              <div className="hidden lg:flex space-x-6 font-medium">
+              <div className="hidden xl:flex space-x-6 font-medium">
                 <NavLink
                   to="/"
                   style={navStyle}
@@ -82,7 +82,7 @@ function Navbar(props) {
             </div>
 
             {/* Hamburger Button (Mobile) */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={` focus:outline-none cursor-pointer`}
@@ -109,13 +109,13 @@ function Navbar(props) {
           {isOpen && (
             <div
               onClick={() => setIsOpen(false)}
-              className="fixed md:hidden bg-black opacity-50 inset-0 z-10"
+              className="fixed xl:hidden bg-black opacity-50 inset-0 z-10"
             ></div>
           )}
 
           <div
             id="mobile-sidebar"
-            className={`md:hidden side-navbar ${isOpen ? 'show' : ''} w-64`}
+            className={`xl:hidden side-navbar ${isOpen ? 'show' : ''} w-64`}
           >
             <div className="flex justify-end">
               <button

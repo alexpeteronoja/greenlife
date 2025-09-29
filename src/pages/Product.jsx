@@ -4,6 +4,7 @@ import {
   medicineBot2,
   messageQuoteIcon,
   phoneCallIcon,
+  shoppingCart,
 } from '../assets';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -106,9 +107,19 @@ function Product() {
           </div>
         </div>
 
+        {/* shooping Cart Logo */}
+
+        <div className="flex justify-end mx-8 my-1 ">
+          <img
+            src={shoppingCart}
+            alt=""
+            className="p-3 rounded-full bg-[#12BA0933]"
+          />
+        </div>
+
         {/* Product List */}
 
-        <div className="flex gap-x-6 items-center text-lg font-medium overflow-x-auto  whitespace-nowrap text-white rounded-[10px]  bg-[#2C2C2C99] border border-[#DADADA99] scrollbar-hide p-2.5 mt-11.5 mx-8 mb-4">
+        <div className="flex gap-x-6 items-center md:text-lg font-medium overflow-x-auto  whitespace-nowrap text-white rounded-[10px]  bg-[#2C2C2C99] border border-[#DADADA99] scrollbar-hide p-2.5 mx-8 mb-4">
           <div className="p-2.5 bg-white text-[#2C2C2C] rounded-[10px]">
             Product Description
           </div>
