@@ -1,10 +1,13 @@
 import { dotIcon } from '../../assets';
 
-function OurJourney() {
+function OurJourney({ sectionRef }) {
   return (
     <>
       <div className="px-8 pb-24 font-inter">
-        <p className="pt-21 pb-4 text-3xl md:text-4xl font-bold text-center">
+        <p
+          ref={sectionRef}
+          className="mt-21 mb-4 text-3xl md:text-4xl font-bold text-center"
+        >
           Our Journey
         </p>
         <p className="text-center max-w-[756px] mx-auto">

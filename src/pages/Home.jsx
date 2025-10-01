@@ -21,6 +21,14 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 function Home() {
+  const handleLogoClick = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       <div
@@ -283,16 +291,23 @@ function Home() {
         </div>
 
         <div className="flex justify-center">
-          <button className="py-2.5 px-6 border-[#1E1E1E] border-t-2 border-b-4 border-x-2 rounded-md">
-            View all
-          </button>
+          <Link to="/blog">
+            <button className="py-2.5 px-6 border-[#1E1E1E] border-t-2 border-b-4 border-x-2 rounded-md cursor-pointer">
+              View all
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* Contact Section */}
 
       <div>
-        <img src={blackLogo} alt="" className="mx-auto" />
+        <img
+          src={blackLogo}
+          alt=""
+          onClick={handleLogoClick}
+          className="mx-auto cursor-pointer"
+        />
       </div>
 
       <div className="relative my-16">

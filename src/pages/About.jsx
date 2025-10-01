@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import {
   aboutBackgroundImg,
   certifiation1,
@@ -22,6 +23,12 @@ import ExperienceData from '../data/ExperienceData';
 import LeadershipData from '../data/LeadershipData';
 
 function About() {
+  const sectionRef = useRef(null);
+
+  const handleStoryClick = () => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <div
@@ -41,7 +48,10 @@ function About() {
             </p>
 
             <div>
-              <button className="px-8 py-2 rounded-full text-lg bg-[#83D167]">
+              <button
+                onClick={handleStoryClick}
+                className="px-8 py-2 rounded-full text-lg bg-[#83D167] cursor-pointer"
+              >
                 Discover Our Story
               </button>
             </div>
@@ -91,7 +101,7 @@ function About() {
         </div>
       </div>
 
-      <OurJourney />
+      <OurJourney sectionRef={sectionRef} />
 
       {/* Vision & Mission Section */}
 

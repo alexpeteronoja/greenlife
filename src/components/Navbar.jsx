@@ -72,13 +72,17 @@ function Navbar(props) {
             </div>
 
             <div className="hidden md:flex gap-x-4">
-              <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-[#12BA09] border-[#12BA09]">
-                Apply
-              </button>
+              <Link to="/contact">
+                <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-[#12BA09] border-[#12BA09]">
+                  Apply
+                </button>
+              </Link>
 
-              <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-white bg-[#12BA09] border-[#12BA09]">
-                Learn
-              </button>
+              <Link to="/about">
+                <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-white bg-[#12BA09] border-[#12BA09]">
+                  Learn
+                </button>
+              </Link>
             </div>
 
             {/* Hamburger Button (Mobile) */}
