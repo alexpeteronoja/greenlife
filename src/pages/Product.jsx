@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   buttoncart,
   medicineBot1,
@@ -210,10 +211,12 @@ function Product() {
             </p>
 
             <div className="flex justify-center">
-              <button className="flex items-center justify-center gap-x-2.5 text-[#393939] py-2.5 px-8 rounded-md bg-[#F7F7F7] ">
-                <img src={phoneCallIcon} alt="" />
-                <span className="text-lg">Schedule a Consultation</span>
-              </button>
+              <Link to="/contact">
+                <button className="flex items-center justify-center gap-x-2.5 text-[#393939] py-2.5 px-8 rounded-md bg-[#F7F7F7] cursor-pointer">
+                  <img src={phoneCallIcon} alt="" />
+                  <span className="text-lg">Schedule a Consultation</span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

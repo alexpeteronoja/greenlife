@@ -53,12 +53,17 @@ function Home() {
             </p>
 
             <div className="flex justify-center md:justify-start gap-5 mt-8">
-              <button className="w-35 bg-white text-[#12BA09] text-[20px] p-2.5 rounded-[10px] cursor-pointer shadow-[inset_2px_2px_4px_rgba(0,0,0,0.25),_inset_-2px_-2px_4px_rgba(0,0,0,0.25)]">
-                Join vendors
-              </button>
-              <button className="w-35 text-[20px] p-2.5 border border-white rounded-[10px] cursor-pointer shadow-[inset_2px_2px_4px_rgba(0,0,0,0.25),_inset_-2px_-2px_4px_rgba(0,0,0,0.25)]">
-                Explore
-              </button>
+              <Link to="/contact">
+                <button className="w-35 bg-white text-[#12BA09] text-[20px] p-2.5 rounded-[10px] cursor-pointer shadow-[inset_2px_2px_4px_rgba(0,0,0,0.25),_inset_-2px_-2px_4px_rgba(0,0,0,0.25)]">
+                  Join vendors
+                </button>
+              </Link>
+
+              <Link to="/products">
+                <button className="w-35 text-[20px] p-2.5 border border-white rounded-[10px] cursor-pointer shadow-[inset_2px_2px_4px_rgba(0,0,0,0.25),_inset_-2px_-2px_4px_rgba(0,0,0,0.25)]">
+                  Explore
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -92,15 +97,20 @@ function Home() {
               </p>
 
               <div className="flex items-center gap-x-6 mt-8">
-                <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
-                  Learn
-                </button>
-                <button className="flex justify-center items-center text-[#12BA09]">
-                  <p className="font-medium">View Products</p>
-                  <div>
-                    <img src={righArrow} alt="" />
-                  </div>
-                </button>
+                <Link to="/about">
+                  <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
+                    Learn
+                  </button>
+                </Link>
+
+                <Link to="/products">
+                  <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
+                    <p className="font-medium">View Products</p>
+                    <div>
+                      <img src={righArrow} alt="" />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
             <div>
@@ -122,12 +132,14 @@ function Home() {
                 <p>Experience quality and reliability in every product.</p>
 
                 <div className="mt-6">
-                  <button className="flex justify-center items-center text-[#12BA09]">
-                    <p className="font-medium">Join</p>
-                    <div>
-                      <img src={righArrow} alt="" />
-                    </div>
-                  </button>
+                  <Link to="/contact">
+                    <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
+                      <p className="font-medium">Join</p>
+                      <div>
+                        <img src={righArrow} alt="" />
+                      </div>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -145,15 +157,20 @@ function Home() {
               </p>
 
               <div className="flex items-center gap-x-6 mt-8">
-                <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
-                  Join
-                </button>
-                <button className="flex justify-center items-center text-[#12BA09]">
-                  <p className="font-medium">Contact</p>
-                  <div>
-                    <img src={righArrow} alt="" />
-                  </div>
-                </button>
+                <Link to="/contact">
+                  <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
+                    Join
+                  </button>
+                </Link>
+
+                <Link to="/contact">
+                  <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
+                    <p className="font-medium">Contact</p>
+                    <div>
+                      <img src={righArrow} alt="" />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
             <div>
@@ -174,12 +191,14 @@ function Home() {
               <p>Protect against fungal infections effectively and safely.</p>
 
               <div className="mt-2">
-                <button className="flex justify-center items-center text-[#12BA09]">
-                  <p className="font-medium">Discover</p>
-                  <div>
-                    <img src={righArrow} alt="" />
-                  </div>
-                </button>
+                <Link to="/products">
+                  <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
+                    <p className="font-medium">Discover</p>
+                    <div>
+                      <img src={righArrow} alt="" />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -194,12 +213,14 @@ function Home() {
               <p>Fight malaria with our proven treatment options.</p>
 
               <div className="mt-2">
-                <button className="flex justify-center items-center text-[#12BA09]">
-                  <p className="font-medium">Explore</p>
-                  <div>
-                    <img src={righArrow} alt="" />
-                  </div>
-                </button>
+                <Link to="/products">
+                  <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
+                    <p className="font-medium">Explore</p>
+                    <div>
+                      <img src={righArrow} alt="" />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

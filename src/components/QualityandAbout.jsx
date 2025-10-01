@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   diversity4,
   healthCross,
@@ -25,15 +26,20 @@ function LandingPartTwo() {
               </p>
 
               <div className="flex items-center gap-x-6 mt-8">
-                <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 ">
-                  Learn More
-                </button>
-                <button className="flex justify-center items-center text-[#12BA09]">
-                  <p className="font-medium">Join us</p>
-                  <div>
-                    <img src={righArrow} alt="" />
-                  </div>
-                </button>
+                <Link to="/about">
+                  <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
+                    Learn More
+                  </button>
+                </Link>
+
+                <Link to="/contact">
+                  <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
+                    <p className="font-medium">Join us</p>
+                    <div>
+                      <img src={righArrow} alt="" />
+                    </div>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -107,12 +113,17 @@ function LandingPartTwo() {
 
           <div>
             <div className="h-full flex justify-center md:justify-end items-center gap-x-4">
-              <button className="text-[#DDFFDB] py-2.5 px-6 rounded-md bg-[#1E1E1E] border-[#1E1E1E] border-t-2 border-b-4 border-x-2">
-                Become a Vendor
-              </button>
-              <button className="py-2.5 px-6 rounded-md border-[#1E1E1E] border-t-2 border-b-4 border-x-2">
-                Learn More
-              </button>
+              <Link to="/contact">
+                <button className="text-[#DDFFDB] py-2.5 px-6 rounded-md bg-[#1E1E1E] border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">
+                  Become a Vendor
+                </button>
+              </Link>
+
+              <Link to="/about">
+                <button className="py-2.5 px-6 rounded-md border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">
+                  Learn More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

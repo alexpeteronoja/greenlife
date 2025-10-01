@@ -3,8 +3,11 @@ import { blogRightArrow, imageTray, leftArrow, righArrow } from '../assets';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { blogpPost22, blogpPost23, blogpPost24 } from '../data/BlogPostData';
+import { useState } from 'react';
 
 function Blog() {
+  const [selected, setSelected] = useState('post');
+
   return (
     <>
       <Navbar navStyle="bg-[#AFAFAE1A] text-black" />
@@ -16,10 +19,16 @@ function Blog() {
             <p className="font-semibold text-lg">Filter & Categories</p>
 
             <div className="bg-[#F7F7F7] p-1 flex justify-between">
-              <button className="bg-[#54B947] rounded-md text-white px-5.5 py-1.5 text-sm">
+              <button
+                onClick={() => setSelected('post')}
+                className={`rounded-md px-5.5 py-1.5 text-sm cursor-pointer text-[#8C8D8B] ${selected === 'post' && 'bg-[#54B947] rounded-md text-white'}`}
+              >
                 All Posts
               </button>
-              <button className=" px-5.5 py-1.5 text-sm text-[#8C8D8B]">
+              <button
+                onClick={() => setSelected('category')}
+                className={`px-5.5 py-1.5 cursor-pointer text-sm text-[#8C8D8B] ${selected === 'category' && 'bg-[#54B947] rounded-md text-white'}`}
+              >
                 By Category
               </button>
             </div>
@@ -50,11 +59,13 @@ function Blog() {
         <div>
           <div className="grid lg:grid-cols-2">
             <div>
-              <img
-                src={imageTray}
-                alt=""
-                className="w-full h-full md:max-w-[531px] md:max-h-[498px] object-cover"
-              />
+              <Link to="/blogpost">
+                <img
+                  src={imageTray}
+                  alt=""
+                  className="w-full h-full md:max-w-[531px] md:max-h-[498px] object-cover"
+                />
+              </Link>
             </div>
 
             <div className="flex items-center py-7 px-6 border-[#EBEBEA] shadow-[0_0_2px_0_#171A1F1F,0_0_1px_0_#171A1F12] ">
@@ -63,7 +74,9 @@ function Blog() {
                   Health
                 </p>
                 <p className="text-xl md:text-3xl font-bold mb-4 mt-5.5">
-                  The Future of Precision Medicine at Greenlife
+                  <Link to="/blogpost">
+                    The Future of Precision Medicine at Greenlife
+                  </Link>
                 </p>
                 <p className="mb-5.5 text-[#8C8D8B]">
                   Discover how Greenlife Pharmaceuticals is pioneering
@@ -73,10 +86,12 @@ function Blog() {
                 <p className="text-[#8C8D8B] text-sm">July 15, 2024</p>
 
                 <div>
-                  <button className="flex items-center justify-center gap-x-2.5 py-2.5 rounded-md text-[#54B947]">
-                    <span className="text-sm">Read More</span>
-                    <img src={righArrow} alt="" />
-                  </button>
+                  <Link to="/blogpost">
+                    <button className="flex items-center justify-center gap-x-2.5 py-2.5 rounded-md text-[#54B947] cursor-pointer">
+                      <span className="text-sm">Read More</span>
+                      <img src={righArrow} alt="" />
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
