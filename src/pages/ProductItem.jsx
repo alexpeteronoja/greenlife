@@ -1,14 +1,14 @@
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import ProductData from '../data/ProductData';
 
 function ProductItem() {
-  //   const { id } = useParams();
+  const { id } = useParams();
   const [itemNo, setItemNo] = useState(1);
 
-  const product = ProductData[1];
+  const product = ProductData[id];
 
   return (
     <>

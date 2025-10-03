@@ -17,6 +17,7 @@ import {
 
 const ProductData = [
   {
+    id: 1,
     title: 'GreenRelief Pain Capsules',
     image: product1,
     description: 'Fast-acting formula for muscle and joint pain.',
@@ -27,6 +28,7 @@ const ProductData = [
   },
 
   {
+    id: 2,
     title: 'Daily Essential Multivitamin',
     image: product2,
     description: 'Comprehensive daily support for overall health.',
@@ -37,6 +39,7 @@ const ProductData = [
   },
 
   {
+    id: 3,
     title: 'Revitalizing Serum',
     image: product14,
     description: 'Youth-enhancing serum for radiant, smooth skin.',
@@ -47,6 +50,7 @@ const ProductData = [
   },
 
   {
+    id: 4,
     title: 'Omega-3 Fish Oil',
     image: product15,
     description: 'Supports heart health and cognitive function.',
@@ -57,6 +61,7 @@ const ProductData = [
   },
 
   {
+    id: 5,
     title: 'Probiotic Balance',
     image: product3,
     description: 'Restores digestive harmony and immune support.',
@@ -67,6 +72,7 @@ const ProductData = [
   },
 
   {
+    id: 6,
     title: 'Immunity Boost Capsules',
     image: product4,
     description: "Fortify your body's natural defenses year-round.",
@@ -77,6 +83,7 @@ const ProductData = [
   },
 
   {
+    id: 7,
     title: 'Joint Support Complex',
     image: product5,
     description: 'Advanced formula for healthy joints and flexibility.',
@@ -87,6 +94,7 @@ const ProductData = [
   },
 
   {
+    id: 8,
     title: 'Vitamin D3 K2 Drops',
     image: product6,
     description: 'Liquid drops for bone health and immune function.',
@@ -97,6 +105,7 @@ const ProductData = [
   },
 
   {
+    id: 9,
     title: 'Hydrating Facial Cleanser',
     image: product7,
     description: 'Gentle cleanser for fresh, moisturized skin.',
@@ -107,6 +116,7 @@ const ProductData = [
   },
 
   {
+    id: 10,
     title: 'Blood Pressure Support',
     image: product8,
     description: 'Natural blend to maintain healthy blood pressure.',
@@ -117,6 +127,7 @@ const ProductData = [
   },
 
   {
+    id: 11,
     title: 'Fiber Boost Powder',
     image: product9,
     description: 'Soluble fiber for digestive regularity and satiety.',
@@ -127,6 +138,7 @@ const ProductData = [
   },
 
   {
+    id: 12,
     title: 'Stress Relief Formula',
     image: product10,
     description: 'Calming blend to reduce stress and promote relaxation.',
@@ -137,6 +149,7 @@ const ProductData = [
   },
 
   {
+    id: 13,
     title: 'Anti-Aging Eye Cream',
     image: product13,
     description: 'Targets fine lines and dark circles around the eyes.',
@@ -147,6 +160,7 @@ const ProductData = [
   },
 
   {
+    id: 14,
     title: 'B-Complex Energy Boost',
     image: product12,
     description: 'Supports energy production and nervous system health.',

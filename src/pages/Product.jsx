@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   buttoncart,
   medicineBot1,
@@ -13,6 +13,8 @@ import ProductCard from '../components/ProductCard';
 import ProductData from '../data/ProductData';
 
 function Product() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div>
@@ -60,8 +62,12 @@ function Product() {
                   Buy Now
                 </button> */}
 
-                <button className="flex items-center justify-center gap-x-2.5 w-full cursor-pointer text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
+                <button
+                  onClick={() => navigate(`/product/1`)}
+                  className="flex items-center justify-center gap-x-2.5 w-full cursor-pointer text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2"
+                >
                   {/* <img src={buttoncart} alt="" /> */}
+
                   <span className="text-sm">View Details</span>
                 </button>
               </div>
@@ -99,7 +105,10 @@ function Product() {
                   Buy Now
                 </button> */}
 
-                <button className="flex items-center justify-center gap-x-2.5 w-full cursor-pointer text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
+                <button
+                  onClick={() => navigate(`/product/1`)}
+                  className="flex items-center justify-center gap-x-2.5 w-full cursor-pointer text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2"
+                >
                   <img src={buttoncart} alt="" />
                   <span className="text-sm">View Details</span>
                 </button>

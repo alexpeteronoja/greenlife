@@ -29,7 +29,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/term-of-use" element={<TermOfUse />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
-            <Route path="/product/id" element={<ProductItem />} />
+            <Route path="/product/:id" element={<ProductItem />} />
           </Routes>
         </Router>
       </div>

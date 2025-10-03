@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import ProductData from '../data/ProductData';
 
 function ProductCard({ product }) {
+  const navigate = useNavigate();
   return (
     <>
       <div>
@@ -39,7 +41,10 @@ function ProductCard({ product }) {
               Buy Now
             </button> */}
 
-            <button className="flex items-center w-full  justify-center gap-x-2.5 text-sm text-white py-2.5 px-4 rounded-[10px] bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
+            <button
+              onClick={() => navigate(`/product/${product.id}`)}
+              className="flex items-center w-full  justify-center gap-x-2.5 text-sm text-white py-2.5 px-4 rounded-[10px] bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer"
+            >
               {/* <img src={buttoncart} alt="" className="hidden md:block" /> */}
               <span className="text-sm whitespace-nowrap">View Details</span>
             </button>
