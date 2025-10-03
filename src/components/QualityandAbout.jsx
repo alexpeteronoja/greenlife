@@ -4,7 +4,6 @@ import {
   healthCross,
   highQualityImg,
   placeholder,
-  righArrow,
 } from '../assets';
 
 function LandingPartTwo() {
@@ -32,14 +31,14 @@ function LandingPartTwo() {
                   </button>
                 </Link>
 
-                <Link to="/contact">
+                {/* <Link to="/contact">
                   <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
                     <p className="font-medium">Join us</p>
                     <div>
                       <img src={righArrow} alt="" />
                     </div>
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -112,12 +111,12 @@ function LandingPartTwo() {
           </div>
 
           <div>
-            <div className="h-full flex justify-center md:justify-end items-center gap-x-4">
-              <Link to="/contact">
+            <div className="h-full flex justify-center  items-center gap-x-4">
+              {/* <Link to="/contact">
                 <button className="text-[#DDFFDB] py-2.5 px-6 rounded-md bg-[#1E1E1E] border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">
                   Become a Vendor
                 </button>
-              </Link>
+              </Link> */}
 
               <Link to="/about">
                 <button className="py-2.5 px-6 rounded-md border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">

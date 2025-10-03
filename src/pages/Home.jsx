@@ -61,9 +61,9 @@ function Home() {
             </p>
 
             <div className="flex justify-center md:justify-start gap-5 mt-8">
-              <Link to="/contact">
+              <Link to="/about">
                 <button className="w-35 bg-white text-[#12BA09] text-[20px] p-2.5 rounded-[10px] cursor-pointer shadow-[inset_2px_2px_4px_rgba(0,0,0,0.25),_inset_-2px_-2px_4px_rgba(0,0,0,0.25)]">
-                  Join vendors
+                  About us
                 </button>
               </Link>
 
@@ -107,7 +107,7 @@ function Home() {
               <div className="flex items-center gap-x-6 mt-8">
                 <Link to="/about">
                   <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
-                    Learn
+                    Learn More
                   </button>
                 </Link>
 
@@ -142,7 +142,7 @@ function Home() {
                 <div className="mt-6">
                   <Link to="/contact">
                     <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
-                      <p className="font-medium">Join</p>
+                      <p className="font-medium">Learn More</p>
                       <div>
                         <img src={righArrow} alt="" />
                       </div>
@@ -165,15 +165,15 @@ function Home() {
               </p>
 
               <div className="flex items-center gap-x-6 mt-8">
-                <Link to="/contact">
+                {/* <Link to="/contact">
                   <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
                     Join
                   </button>
-                </Link>
+                </Link> */}
 
                 <Link to="/contact">
                   <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
-                    <p className="font-medium">Contact</p>
+                    <p className="font-medium">Contact Us</p>
                     <div>
                       <img src={righArrow} alt="" />
                     </div>
