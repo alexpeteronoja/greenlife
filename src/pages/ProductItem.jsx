@@ -8,7 +8,9 @@ function ProductItem() {
   const { id } = useParams();
   const [itemNo, setItemNo] = useState(1);
 
-  const product = ProductData[id];
+  const mainId = id - 1;
+
+  const product = ProductData[mainId];
 
   return (
     <>
