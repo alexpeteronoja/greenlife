@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import ProductData from '../data/ProductData';
+import ProductCard from '../components/ProductCard';
 
 function ProductItem() {
   const { id } = useParams();
@@ -89,6 +90,22 @@ function ProductItem() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Related Product */}
+
+        <div className="mt-12.5 md:mt-17.5 xl:mt-23 mx-3 md:mx-10">
+          <p className="mb-6 text-4xl text-center md:mb-9 xl:mb-11">
+            You may also like
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-center gap-7.5">
+            {ProductData.slice(4, 8).map((item, index) => (
+              <div key={index}>
+                <ProductCard product={item} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
