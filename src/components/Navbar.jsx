@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { blackLogo, cancelIcon, searchLogo } from '../assets';
+import { blackLogo, cancelIcon } from '../assets';
 
 function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,21 +66,21 @@ function Navbar(props) {
                 </NavLink>
               </div>
 
-              <div className="hidden md:block">
+              {/* <div className="hidden md:block">
                 <img src={searchLogo} alt="" className="w-6.5 fill-white/60" />
-              </div>
+              </div> */}
             </div>
 
             <div className="hidden md:flex gap-x-4">
-              <Link to="/contact">
+              {/* <Link to="/contact">
                 <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-[#12BA09] border-[#12BA09]">
                   Apply
                 </button>
-              </Link>
+              </Link> */}
 
               <Link to="/about">
                 <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-white bg-[#12BA09] border-[#12BA09]">
-                  Learn
+                  Contact us
                 </button>
               </Link>
             </div>

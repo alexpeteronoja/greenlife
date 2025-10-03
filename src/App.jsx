@@ -11,6 +11,7 @@ import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermOfUse from './pages/TermOfUse';
 import CookiePolicy from './pages/CookiePolicy';
+import ProductItem from './pages/ProductItem';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/term-of-use" element={<TermOfUse />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/product/id" element={<ProductItem />} />
           </Routes>
         </Router>
       </div>

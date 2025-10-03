@@ -1,4 +1,3 @@
-import { buttoncart } from '../assets';
 import ProductData from '../data/ProductData';
 
 function ProductCard({ product }) {
@@ -36,13 +35,13 @@ function ProductCard({ product }) {
           </div>
 
           <div className="mt-4 flex flex-col xl:flex-row justify-between items-center gap-4">
-            <button className="py-2.5 px-4 w-full  rounded-[10px] border text-sm border-[#12BA09] text-[#12BA09] whitespace-nowrap">
+            {/* <button className="py-2.5 px-4 w-full  rounded-[10px] border text-sm border-[#12BA09] text-[#12BA09] whitespace-nowrap">
               Buy Now
-            </button>
+            </button> */}
 
-            <button className="flex items-center w-full  justify-center gap-x-2.5 text-sm text-white py-2.5 px-4 rounded-[10px] bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
-              <img src={buttoncart} alt="" className="hidden md:block" />
-              <span className="text-sm whitespace-nowrap">Add to Cart</span>
+            <button className="flex items-center w-full  justify-center gap-x-2.5 text-sm text-white py-2.5 px-4 rounded-[10px] bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
+              {/* <img src={buttoncart} alt="" className="hidden md:block" /> */}
+              <span className="text-sm whitespace-nowrap">View Details</span>
             </button>
           </div>
         </div>

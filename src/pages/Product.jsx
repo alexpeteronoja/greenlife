@@ -56,13 +56,13 @@ function Product() {
               </div>
 
               <div className="mt-4 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4">
-                <button className="py-2.5 px-6 rounded-md border border-[#12BA09] text-[#12BA09]">
+                {/* <button className="py-2.5 px-6 rounded-md border border-[#12BA09] text-[#12BA09]">
                   Buy Now
-                </button>
+                </button> */}
 
-                <button className="flex items-center justify-center gap-x-2.5 text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
-                  <img src={buttoncart} alt="" />
-                  <span className="text-sm">Add to Cart</span>
+                <button className="flex items-center justify-center gap-x-2.5 w-full cursor-pointer text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
+                  {/* <img src={buttoncart} alt="" /> */}
+                  <span className="text-sm">View Details</span>
                 </button>
               </div>
             </div>
@@ -95,13 +95,13 @@ function Product() {
               </div>
 
               <div className="mt-4 flex flex-col md:flex-row justify-center md:justify-start items-center gap-4">
-                <button className="py-2.5 px-6 rounded-md border border-[#12BA09] text-[#12BA09]">
+                {/* <button className="py-2.5 px-6 rounded-md border border-[#12BA09] text-[#12BA09]">
                   Buy Now
-                </button>
+                </button> */}
 
-                <button className="flex items-center justify-center gap-x-2.5 text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
+                <button className="flex items-center justify-center gap-x-2.5 w-full cursor-pointer text-white py-2.5 px-6 rounded-md bg-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2">
                   <img src={buttoncart} alt="" />
-                  <span className="text-sm">Add to Cart</span>
+                  <span className="text-sm">View Details</span>
                 </button>
               </div>
             </div>
