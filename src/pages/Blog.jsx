@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
-import { blogRightArrow, imageTray, leftArrow, righArrow } from '../assets';
+import {
+  blogRightArrow,
+  imageTray,
+  leftArrow,
+  righArrow,
+  shareIcon,
+} from '../assets';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { blogpPost22, blogpPost23, blogpPost24 } from '../data/BlogPostData';
@@ -85,13 +91,19 @@ function Blog() {
                 </p>
                 <p className="text-[#8C8D8B] text-sm">July 15, 2024</p>
 
-                <div>
-                  <Link to="/blogpost">
-                    <button className="flex items-center justify-center gap-x-2.5 py-2.5 rounded-md text-[#54B947] cursor-pointer">
-                      <span className="text-sm">Read More</span>
-                      <img src={righArrow} alt="" />
-                    </button>
-                  </Link>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <Link to="/blogpost">
+                      <button className="flex items-center justify-center gap-x-2.5 py-2.5 rounded-md text-[#54B947] cursor-pointer">
+                        <span className="text-sm">Read More</span>
+                        <img src={righArrow} alt="" />
+                      </button>
+                    </Link>
+                  </div>
+
+                  <div>
+                    <img src={shareIcon} alt="" className="w-7.5 h-7.5" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,11 +125,15 @@ function Blog() {
                     />
                   </Link>
                 </div>
-                <div className="my-2">
-                  <p className="px-2 py-1 bg-[#54B9471A] rounded-full text-[#54B947] inline-block font-medium text-sm">
-                    {item.category}
-                  </p>
-                  <p className="mt-4.5 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
+                <div className="my-2 mx-2">
+                  <div className="py-1 text-[#54B947] font-medium text-xs flex justify-between items-center">
+                    <div>{item.category}</div>
+                    <div>
+                      <img src={shareIcon} alt="" className="w-7.5 h-7.5" />
+                    </div>
+                  </div>
+
+                  <p className="mt-2 mb-0.5 text-[#242524] font-semibold text-lg">
                     <Link to="/blogpost">{item.title}</Link>
                   </p>
                   <p className="mb-2 text-[#8C8D8B] text-sm">
@@ -146,10 +162,14 @@ function Blog() {
                   </Link>
                 </div>
                 <div className="my-2">
-                  <p className="px-2 py-1 bg-[#54B9471A] rounded-full text-[#54B947] inline-block font-medium text-sm">
-                    {item.category}
-                  </p>
-                  <p className="mt-4.5 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
+                  <div className="py-1  text-[#54B947] font-medium text-xs flex justify-between items-center">
+                    <div>{item.category}</div>
+                    <div>
+                      <img src={shareIcon} alt="" className="w-7.5 h-7.5" />
+                    </div>
+                  </div>
+
+                  <p className="mt-2 mb-0.5 text-[#242524] font-semibold text-lg">
                     <Link to="/blogpost">{item.title}</Link>
                   </p>
                   <p className="mb-2 text-[#8C8D8B] text-sm">July 15, 2024</p>
@@ -176,10 +196,15 @@ function Blog() {
                   </Link>
                 </div>
                 <div className="my-2">
-                  <p className="px-2 py-1 bg-[#54B9471A] rounded-full text-[#54B947] inline-block font-medium text-sm">
-                    {item.category}
-                  </p>
-                  <p className="mt-4.5 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
+                  <div className="py-1  text-[#54B947] font-medium text-xs flex justify-between items-center">
+                    <div>{item.category}</div>
+
+                    <div>
+                      <img src={shareIcon} alt="" className="w-7.5 h-7.5" />
+                    </div>
+                  </div>
+
+                  <p className="mt-2 mb-0.5 text-[#242524] font-semibold text-lg md:text-xl">
                     <Link to="/blogpost">{item.title}</Link>
                   </p>
                   <p className="mb-2 text-[#8C8D8B] text-sm">

@@ -120,8 +120,12 @@ import imageTechnology from './Image-Technology-Innovation-Leadership.png';
 import imageFoundation from './Image-Foundation-Early-Growth.png';
 import imageCommunity from './Image-Community-Health-Initiative.png';
 import imageInfrastructure from './Image-Infrastructure-Expansion.png';
+import shareIcon from './majesticons_share.svg';
+import blogMainImg from './A gloved hand of a scientist holding.png';
 
 export {
+  blogMainImg,
+  shareIcon,
   imageTechnology,
   imageFoundation,
   imageCommunity,
