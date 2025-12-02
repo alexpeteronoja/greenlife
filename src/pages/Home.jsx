@@ -2,16 +2,12 @@ import {
   overlay,
   righArrow,
   productImage,
-  prescritpion,
-  placeholder5,
   placeholder6,
   contactFrame,
-  phoneImg,
   envelopeImg,
   mapLogo,
   mapImg,
   rectangle,
-  blackLogo,
 } from '../assets';
 import QualityandAbout from '../components/QualityandAbout';
 import Navbar from '../components/Navbar';
@@ -21,13 +17,13 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 function Home() {
-  const handleLogoClick = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-  };
+  // const handleLogoClick = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: 'smooth',
+  //   });
+  // };
 
   return (
     <>
@@ -81,21 +77,21 @@ function Home() {
 
       {/* Product Category */}
 
-      <div className="bg-[#D9D9D999] text-black">
+      <div className="text-black">
         <h2 className="pt-10 mb-6 text-4xl text-center">
           Our Product Categories
         </h2>
 
-        <p className="text-lg text-center">
-          Discover our range of effective healthcare solutions.
+        <p className="text-lg text-center text-[#4A5565]">
+          Explore our comprehensive range of pharmaceutical solutions
         </p>
 
         <div className="grid lg:grid-cols-2 gap-8  mx-8 mt-8 pb-18">
           {/* First Section */}
 
-          <div className="row-span-2 bg-white pt-12">
+          <div className="row-span-2 bg-[linear-gradient(135deg,_#EFF6FF_0%,_#ECFEFF_100%)] pt-12 rounded-[40px]">
             <div className="px-12 pb-12">
-              <p>Antibiotics</p>
+              {/* <p>Antibiotics</p> */}
               <p className="text-4xl mt-2 mb-6">
                 Effective Solutions for Infections
               </p>
@@ -105,30 +101,34 @@ function Home() {
               </p>
 
               <div className="flex items-center gap-x-6 mt-8">
-                <Link to="/about">
-                  <button className="py-2.5 px-6 border-[#12BA09] border-t-2 border-b-4 border-x-2 cursor-pointer">
-                    Learn More
+                <Link to="/products">
+                  <button className="py-2.5 px-6 border-[#12BA09] text-[#12BA09] border-t-2 border-b-4 border-x-2 rounded-lg cursor-pointer">
+                    View Products
                   </button>
                 </Link>
 
-                <Link to="/products">
+                {/* <Link to="/products">
                   <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
                     <p className="font-medium">View Products</p>
                     <div>
                       <img src={righArrow} alt="" />
                     </div>
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <div>
-              <img src={productImage} alt="" className="w-full" />
+              <img
+                src={productImage}
+                alt=""
+                className="w-full rounded-b-[40px]"
+              />
             </div>
           </div>
 
           {/* Second Section */}
 
-          <div className="grid grid-cols-2 bg-white">
+          {/* <div className="grid grid-cols-2 bg-white">
             <div>
               <img src={placeholder5} alt="" className="w-full h-full" />
             </div>
@@ -151,17 +151,19 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Third Section */}
 
-          <div className="row-span-2 bg-white pt-12 mt-8">
+          <div className="row-span-2 bg-[linear-gradient(135deg,_#EFF6FF_0%,_#ECFEFF_100%)] pt-12 mt-8 md:mt-0 rounded-[40px]">
             <div className="px-12 pb-12">
-              <p>Trusted</p>
-              <p className="text-4xl mt-2 mb-6">Partner with Us Today!</p>
+              {/* <p>Trusted</p> */}
+              <p className="text-4xl mt-2 mb-6">
+                Trusted Healthcare Solutions!
+              </p>
               <p>
-                Become a vendor and help us make healthcare accessible for
-                everyone.
+                Explore our range of high-quality pharmaceutical products
+                designed to support better health and wellness.
               </p>
 
               <div className="flex items-center gap-x-6 mt-8">
@@ -172,8 +174,8 @@ function Home() {
                 </Link> */}
 
                 <Link to="/contact">
-                  <button className="flex justify-center items-center text-[#12BA09] cursor-pointer">
-                    <p className="font-medium">Contact Us</p>
+                  <button className="flex justify-center items-center py-2.5 px-6 text-[#12BA09] border-[#12BA09] border-t-2 border-b-4 border-x-2 rounded-lg cursor-pointer">
+                    <p className="font-medium">Explore</p>
                     <div>
                       <img src={righArrow} alt="" />
                     </div>
@@ -182,12 +184,16 @@ function Home() {
               </div>
             </div>
             <div>
-              <img src={placeholder6} alt="" className="w-full" />
+              <img
+                src={placeholder6}
+                alt=""
+                className="w-full rounded-b-[40px]"
+              />
             </div>
           </div>
 
           {/* Fourth Section */}
-          <div className="mt-8 grid grid-cols-2 gap-x-4  md:gap-x-8">
+          {/* <div className="mt-8 grid grid-cols-2 gap-x-4  md:gap-x-8">
             <div className="bg-white p-6">
               <div>
                 <img src={prescritpion} alt="" />
@@ -231,7 +237,7 @@ function Home() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -301,75 +307,89 @@ function Home() {
 
       {/* Contact Section */}
 
-      <div>
-        <img
-          src={blackLogo}
-          alt=""
-          onClick={handleLogoClick}
-          className="mx-auto cursor-pointer"
-        />
-      </div>
+      <div className="px-8 py-28 bg-[linear-gradient(135deg,_#F9FAFB_0%,_#ECFDF5_100%)]">
+        {/* <div>
+          <img
+            src={blackLogo}
+            alt=""
+            onClick={handleLogoClick}
+            className="mx-auto cursor-pointer"
+          />
+        </div> */}
 
-      <div className="relative my-16">
-        <div className="flex justify-end">
-          <img src={mapImg} alt="" className="" />
+        <div className="text-center">
+          <p className="text-2xl md:text-5xl mt-4 mb-6">Get in Touch</p>
+
+          <p>We're here to help you with any inquiries</p>
         </div>
 
-        <div className="lg:absolute lg:top-1/4 lg:left-1/32 mt-10 lg:mt-0 flex justify-center">
-          <div
-            style={{
-              backgroundImage: `linear-gradient(#0000004D, #0000004D), url(${contactFrame})`,
-            }}
-            className="bg-cover bg-center bg-no-repeat h-[415px] w-[576px] text-white py-4 px-5.5 flex justify-center items-center"
-          >
-            <div>
-              <p className="text-center text-3xl font-medium">Contact Us</p>
-              <p className="mt-4 text-center">
-                We’re here to assist you with any inquiries or support you may
-                need.
-              </p>
+        <div className="md:flex gap-x-10 justify-center my-16">
+          <div className="flex justify-end">
+            <img
+              src={mapImg}
+              alt=""
+              className="w-full max-w-[545px] rounded-4xl"
+            />
+          </div>
 
-              {/* contact informations */}
+          <div className="mt-10 lg:mt-0 flex justify-center w-full max-w-[545px]">
+            <div
+              style={{
+                backgroundImage: `linear-gradient(#0000004D, #0000004D), url(${contactFrame})`,
+              }}
+              className="bg-cover bg-center bg-no-repeat h-[415px] w-[576px] text-white py-4 px-5.5 flex justify-center items-center"
+            >
+              <div>
+                <p className="text-center text-3xl font-medium">Contact Us</p>
+                <p className="mt-4 text-center">
+                  We’re here to assist you with any inquiries or support you may
+                  need.
+                </p>
 
-              <div className="mt-11">
-                <div>
-                  <div className="flex gap-x-10 mb-4">
-                    <div className="flex gap-x-4">
-                      <div>
-                        <img src={phoneImg} alt="" />
-                      </div>
+                {/* contact informations */}
 
-                      <div>
-                        <p className="mb-2 font-verelaRound text-xl">Phone</p>
-                        <p className="font-exo2 underline">+1 (555) 123-4567</p>
+                <div className="mt-11">
+                  <div>
+                    <div className="flex gap-x-10 mb-4">
+                      {/* <div className="flex gap-x-4">
+                        <div>
+                          <img src={phoneImg} alt="" />
+                        </div>
+
+                        <div>
+                          <p className="mb-2 font-verelaRound text-xl">Phone</p>
+                          <p className="font-exo2 underline">
+                            +1 (555) 123-4567
+                          </p>
+                        </div>
+                      </div> */}
+
+                      <div className="flex gap-x-4">
+                        <div>
+                          <img src={envelopeImg} alt="" />
+                        </div>
+
+                        <div>
+                          <p className="mb-2 font-verelaRound text-xl">Email</p>
+                          <p className="font-exo2 underline">
+                            hello@Greenlife.com
+                          </p>
+                        </div>
                       </div>
                     </div>
 
                     <div className="flex gap-x-4">
                       <div>
-                        <img src={envelopeImg} alt="" />
+                        <img src={mapLogo} alt="" />
                       </div>
 
                       <div>
-                        <p className="mb-2 font-verelaRound text-xl">Email</p>
+                        <p className="mb-2 font-verelaRound text-xl">Office</p>
                         <p className="font-exo2 underline">
-                          hello@Greenlife.com
+                          35A, Association Avenue, Off Obanikoro Bus Stop,
+                          Ilupeju, Lagos Nigeria.
                         </p>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-x-4">
-                    <div>
-                      <img src={mapLogo} alt="" />
-                    </div>
-
-                    <div>
-                      <p className="mb-2 font-verelaRound text-xl">Office</p>
-                      <p className="font-exo2 underline">
-                        35A, Association Avenue, Off Obanikoro Bus Stop,
-                        Ilupeju, Lagos Nigeria.
-                      </p>
                     </div>
                   </div>
                 </div>

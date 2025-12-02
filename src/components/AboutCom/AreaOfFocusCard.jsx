@@ -9,11 +9,11 @@ function AreaOfFocusCard({ product }) {
           <img
             src={product.image}
             alt=""
-            className="w-full h-auto max-h-[256px] object-cover rounded-lg"
+            className="w-full h-auto max-h-[256px] object-cover rounded-t-3xl"
           />
         </Link>
 
-        <div className="mt-4">
+        <div className="m-8">
           <Link to="/blogpost">
             <p className="font-bold text-xl mb-2">{product.title}</p>
           </Link>

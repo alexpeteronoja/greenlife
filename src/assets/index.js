@@ -110,8 +110,28 @@ import rightTypeArrow from './right-type-arrow.png';
 import tiktokLogo from './tiktok-brands-solid-full.svg';
 import shoppingCart from './shopping-cart.svg';
 import cancelIcon from './xmark-solid-full.svg';
+import communityImg from './community-img.svg';
+import innovationImg from './innovation-img.svg';
+import qualityImg from './quality-img.svg';
+import purposeImg from './purpose-img.svg';
+import missionImg from './mission-img.svg';
+import visionImg from './vision-img.svg';
+import imageTechnology from './Image-Technology-Innovation-Leadership.png';
+import imageFoundation from './Image-Foundation-Early-Growth.png';
+import imageCommunity from './Image-Community-Health-Initiative.png';
+import imageInfrastructure from './Image-Infrastructure-Expansion.png';
 
 export {
+  imageTechnology,
+  imageFoundation,
+  imageCommunity,
+  imageInfrastructure,
+  communityImg,
+  innovationImg,
+  visionImg,
+  qualityImg,
+  purposeImg,
+  missionImg,
   moutainBg,
   overlay,
   logo,

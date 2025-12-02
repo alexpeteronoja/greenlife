@@ -19,15 +19,16 @@ import OurJourney from '../components/AboutCom/OurJourney';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import AreaOfFocusData from '../data/AreaOfFocusData';
+import CoreValues from '../data/CoreValues';
 import ExperienceData from '../data/ExperienceData';
 import LeadershipData from '../data/LeadershipData';
 
 function About() {
   const sectionRef = useRef(null);
 
-  const handleStoryClick = () => {
-    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  // const handleStoryClick = () => {
+  //   sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  // };
 
   return (
     <>
@@ -35,10 +36,10 @@ function About() {
         style={{ backgroundImage: `url(${aboutBackgroundImg})` }}
         className="bg-cover bg-center bg-no-repeat  relative"
       >
-        <div className="h-[550px] md:h-[757px] bg-[linear-gradient(0deg,#00000080_0%,#00000080_100%),linear-gradient(180deg,#1E1E1E00_45.67%,#FFFFFF3D_61.06%,#FFFFFF99_77.88%)]">
+        <div className="h-[500px] md:h-[600px] bg-[linear-gradient(0deg,#00000080_0%,#00000080_100%),linear-gradient(180deg,#1E1E1E00_45.67%,#FFFFFF3D_61.06%,#FFFFFF99_77.88%)]">
           <Navbar navStyle="bg-[#FFFFFF1A] text-white" />
 
-          <div className="text-center text-white mt-[100px] md:mt-[210px]">
+          <div className="text-center text-white mt-[100px] md:mt-[210px] px-3">
             <p className="text-3xl md:text-5xl font-black">
               Empowering Health & Enriching Lives Since 1995
             </p>
@@ -47,14 +48,14 @@ function About() {
               dedicated to delivering quality healthcare solutions.
             </p>
 
-            <div>
+            {/* <div>
               <button
                 onClick={handleStoryClick}
                 className="px-8 py-2 rounded-full text-lg bg-[#83D167] cursor-pointer"
               >
                 Discover Our Story
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -71,7 +72,7 @@ function About() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <p className="pt-23.5 text-4xl text-center text-[#242524] font-bold">
             Greenlife At A Glance
           </p>
@@ -98,8 +99,12 @@ function About() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
+
+      {/* Our Core Values */}
+
+      <OurCoreValues />
 
       <OurJourney sectionRef={sectionRef} />
 
@@ -264,25 +269,23 @@ function About() {
         </div>
       </div>
 
-      {/* Our Core Values */}
-
-      <OurCoreValues />
-
       {/* Area of Focus */}
 
-      <div className="px-8 pb-24 font-inter">
+      <div className="px-8 pb-24 font-inter bg-[linear-gradient(135deg,_#F0FDF4_0%,_#EFF6FF_100%)]">
         <p className="pt-21 pb-4 text-3xl md:text-4xl font-bold text-center">
           Areas of Focus
         </p>
 
         <p className="text-center max-w-[756px] mx-auto">
-          We concentrate our expertise and resources on key areas where we can
-          make the most significant impact on healthcare in West Africa.
+          Concentrating our expertise where we can make the most significant
+          impact on West African healthcare.
         </p>
 
         <div className="mt-9 grid md:grid-cols-2 gap-x-14 gap-y-11">
           {AreaOfFocusData.map(product => (
-            <AreaOfFocusCard key={product.id} product={product} />
+            <div className="bg-white rounded-3xl">
+              <AreaOfFocusCard key={product.id} product={product} />
+            </div>
           ))}
         </div>
       </div>
@@ -291,7 +294,7 @@ function About() {
 
       <div className="mx-8 my-15">
         <p className="text-[#242524] text-4xl font-bold text-center">
-          Other Brands
+          Partner With Us
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10 mt-[70px] justify-items-center w-full">
