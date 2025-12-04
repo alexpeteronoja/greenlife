@@ -122,8 +122,42 @@ import imageCommunity from './Image-Community-Health-Initiative.png';
 import imageInfrastructure from './Image-Infrastructure-Expansion.png';
 import shareIcon from './majesticons_share.svg';
 import blogMainImg from './A gloved hand of a scientist holding.png';
+import bgDesign from './background-design.png';
+import bgDesgin02 from './background-design2.png';
+import facebookWhite from './facebook-white.png';
+import instagramWhite from './instagram-white.png';
+import twitterWhite from './twitter-white.png';
+import linkedinWhite from './linkedin-white.png';
+import youtubeWhite from './youtube-whte.png';
+import bgDesgin03 from './background-design3.png';
+import bgDesgin04 from './background-design4.png';
+import bgDesgin05 from './background-design5.png';
+import bgDesgin06 from './background-design6.png';
+import downloadIcon from './download-icon.svg';
+import shareIcon2 from './share-icon.svg';
+import listImage from './list-image.svg';
+import qualityAssured from './quality-asured.svg';
+import thirdPartyTested from './third-Party Tested.svg';
+import naturalSources from './natural-sources.svg';
 
 export {
+  qualityAssured,
+  thirdPartyTested,
+  naturalSources,
+  listImage,
+  downloadIcon,
+  shareIcon2,
+  bgDesgin05,
+  bgDesgin06,
+  bgDesgin04,
+  facebookWhite,
+  instagramWhite,
+  twitterWhite,
+  linkedinWhite,
+  youtubeWhite,
+  bgDesign,
+  bgDesgin02,
+  bgDesgin03,
   blogMainImg,
   shareIcon,
   imageTechnology,

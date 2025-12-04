@@ -1,13 +1,19 @@
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import ProductData from '../data/ProductData';
 import ProductCard from '../components/ProductCard';
+import {
+  downloadIcon,
+  naturalSources,
+  qualityAssured,
+  shareIcon2,
+  thirdPartyTested,
+} from '../assets';
 
 function ProductItem() {
   const { id } = useParams();
-  const [itemNo, setItemNo] = useState(1);
+  // const [itemNo, setItemNo] = useState(1);
 
   const mainId = id - 1;
 
@@ -24,15 +30,60 @@ function ProductItem() {
               <img
                 src={product.image}
                 alt=""
-                className="w-full h-auto mx-auto  max-w-[350px] max-h-[467px] object-cover"
+                className="w-full h-auto mx-auto bg-[#F9FAFB] p-12  max-w-[488px] max-h-[488px] object-cover rounded-2xl"
               />
+
+              <div className="flex gap-3 mt-6">
+                <button className="w-full rounded-[14px] border border-[#D1D5DC] h-12.5 flex justify-center items-center gap-2 cursor-pointer">
+                  <img src={downloadIcon} alt="" />
+                  Download Info
+                </button>
+
+                <button className="w-full rounded-[14px] border border-[#D1D5DC] h-12.5 flex justify-center items-center gap-2 cursor-pointer">
+                  <img src={shareIcon2} alt="" />
+                  Share
+                </button>
+              </div>
             </div>
 
             {/* Description and Cutomization */}
 
             <div>
-              <p className="text-3xl heading">{product.title}</p>
-              <div className="my-2.5">
+              <h1 className="text-3xl heading">{product.title}</h1>
+
+              <div>
+                <p className="mt-3.5 text-[#4A5565] text-xl">
+                  Fast-acting formula for muscle and joint pain.
+                </p>
+              </div>
+
+              <h2 className="text-2xl mb-3.5">Overview</h2>
+
+              <p>
+                GreenRelief Pain Capsules offer rapid and effective relief from
+                various types of pain, including muscle aches, joint discomfort,
+                and headaches. Our advanced formula is designed for quick
+                absorption, ensuring you feel better, faster. Ideal for daily
+                aches or post-exercise recovery.
+              </p>
+
+              <div className="mt-10 border-y border-y-[#E5E7EB] py-4">
+                <h2 className="text-2xl mb-3.5">Key Benefits</h2>
+
+                <ul
+                  className={`list-image-[url('/images/list-image.svg')] list-inside`}
+                >
+                  <li>Fast-acting relief within 30 minutes</li>
+                  <li>Targets muscle aches, joint pain, and headaches</li>
+                  <li>
+                    Advanced absorption technology for maximum effectiveness
+                  </li>
+                  <li>Non-drowsy formula - safe for daytime use</li>
+                  <li>Suitable for post-exercise recovery</li>
+                </ul>
+              </div>
+
+              {/* <div className="my-2.5">
                 <span
                   className={`text-2xl `}
                 >{`₦${product.price.toLocaleString('en-Ng')}`}</span>
@@ -88,8 +139,59 @@ function ProductItem() {
                 <p className="mt-1.5 text-center">
                   Guaranteed safe & secure checkout
                 </p>
-              </div>
+              </div> */}
             </div>
+          </div>
+        </div>
+
+        <div className=" grid grid-cols-3 gap-x-8 mt-11 mx-5 md:mx-10 pt-8 border-y border-y-[#E5E7EB]">
+          <div>
+            <img
+              src={qualityAssured}
+              alt=""
+              className="bg-[#12BA091A] rounded-[14px] p-3"
+            />
+
+            <p className="text-xl mt-4">Quality Assured</p>
+
+            <p className="mt-1.5">
+              Manufactured in FDA-approved facilities with rigorous quality
+              control standards.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src={thirdPartyTested}
+              alt=""
+              className="bg-[#EFF6FF] rounded-[14px] p-3"
+            />
+
+            <p className="text-xl mt-4">Third-Party Tested</p>
+
+            <p className="mt-1.5">
+              Independent laboratory testing ensures purity and potency of all
+              ingredients.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src={naturalSources}
+              alt=""
+              className="bg-[#12BA091A] rounded-[14px] p-3"
+            />
+
+            <p className="text-xl mt-4">Natural Sources</p>
+
+            <p className="mt-1.5">
+              Sourced from premium natural ingredients with minimal processing
+              for maximum efficacy.
+            </p>
+          </div>
+
+          <div className="bg-[#F9FAFB] p-8 ">
+            <h2>Safety Information</h2>
           </div>
         </div>
 

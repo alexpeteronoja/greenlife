@@ -78,7 +78,7 @@ function Navbar(props) {
                 </button>
               </Link> */}
 
-              <Link to="/about">
+              <Link to="/contact">
                 <button className="px-5 py-2 rounded-md border-2 cursor-pointer text-white bg-[#12BA09] border-[#12BA09]">
                   Contact us
                 </button>

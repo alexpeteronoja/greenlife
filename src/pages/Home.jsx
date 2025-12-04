@@ -8,6 +8,12 @@ import {
   mapLogo,
   mapImg,
   rectangle,
+  bgDesign,
+  facebookWhite,
+  instagramWhite,
+  twitterWhite,
+  linkedinWhite,
+  youtubeWhite,
 } from '../assets';
 import QualityandAbout from '../components/QualityandAbout';
 import Navbar from '../components/Navbar';
@@ -241,6 +247,10 @@ function Home() {
         </div>
       </div>
 
+      <div>
+        <img src={bgDesign} alt="" className="m-0 p-0 object-cover" />
+      </div>
+
       <QualityandAbout />
 
       {/* Blog Section */}
@@ -323,21 +333,26 @@ function Home() {
           <p>We're here to help you with any inquiries</p>
         </div>
 
-        <div className="md:flex gap-x-10 justify-center my-16">
-          <div className="flex justify-end">
-            <img
-              src={mapImg}
-              alt=""
-              className="w-full max-w-[545px] rounded-4xl"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 justify-center my-16">
+          <div
+            style={{
+              backgroundImage: `linear-gradient(#00000099, #00000000), url(${mapImg})`,
+            }}
+            className="bg-cover bg-center bg-no-repeat h-[415px] rounded-4xl text-white py-4 px-5.5 flex justify-center items-end"
+          >
+            <div className="w-full">
+              <button className="w-full py-4 rounded-full cursor-pointer bg-[#FFFFFFE5] text-[#101828] shadow-[0_20px_25px_-5px_#0000001A,0_8px_10px_-6px_#0000001A]">
+                📍 View on Google Map
+              </button>
+            </div>
           </div>
 
-          <div className="mt-10 lg:mt-0 flex justify-center w-full max-w-[545px]">
+          <div className="mt-10 lg:mt-0 flex justify-center">
             <div
               style={{
                 backgroundImage: `linear-gradient(#0000004D, #0000004D), url(${contactFrame})`,
               }}
-              className="bg-cover bg-center bg-no-repeat h-[415px] w-[576px] text-white py-4 px-5.5 flex justify-center items-center"
+              className="bg-cover bg-center bg-no-repeat w-full h-[415px] text-white py-4 px-5.5 flex justify-center items-center"
             >
               <div>
                 <p className="text-center text-3xl font-medium">Contact Us</p>
@@ -390,6 +405,14 @@ function Home() {
                           Ilupeju, Lagos Nigeria.
                         </p>
                       </div>
+                    </div>
+
+                    <div className="flex gap-x-5 mt-4">
+                      <img src={facebookWhite} alt="" />
+                      <img src={instagramWhite} alt="" />
+                      <img src={twitterWhite} alt="" />
+                      <img src={linkedinWhite} alt="" />
+                      <img src={youtubeWhite} alt="" />
                     </div>
                   </div>
                 </div>

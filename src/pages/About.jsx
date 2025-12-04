@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import {
   aboutBackgroundImg,
+  bgDesgin05,
+  bgDesgin06,
   certifiation1,
   certifiation10,
   certifiation2,
@@ -271,22 +273,32 @@ function About() {
 
       {/* Area of Focus */}
 
-      <div className="px-8 pb-24 font-inter bg-[linear-gradient(135deg,_#F0FDF4_0%,_#EFF6FF_100%)]">
-        <p className="pt-21 pb-4 text-3xl md:text-4xl font-bold text-center">
-          Areas of Focus
-        </p>
+      <div className="bg-[linear-gradient(135deg,_#F0FDF4_0%,_#EFF6FF_100%)]">
+        <div>
+          <img src={bgDesgin05} alt="" className="m-0 p-0 object-cover" />
+        </div>
 
-        <p className="text-center max-w-[756px] mx-auto">
-          Concentrating our expertise where we can make the most significant
-          impact on West African healthcare.
-        </p>
+        <div className="px-8 pb-24 font-inter">
+          <p className="pt-21 pb-4 text-3xl md:text-4xl font-bold text-center">
+            Areas of Focus
+          </p>
 
-        <div className="mt-9 grid md:grid-cols-2 gap-x-14 gap-y-11">
-          {AreaOfFocusData.map(product => (
-            <div className="bg-white rounded-3xl">
-              <AreaOfFocusCard key={product.id} product={product} />
-            </div>
-          ))}
+          <p className="text-center max-w-[756px] mx-auto">
+            Concentrating our expertise where we can make the most significant
+            impact on West African healthcare.
+          </p>
+
+          <div className="mt-9 grid md:grid-cols-2 gap-x-14 gap-y-11">
+            {AreaOfFocusData.map(product => (
+              <div className="bg-white rounded-3xl">
+                <AreaOfFocusCard key={product.id} product={product} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <img src={bgDesgin06} alt="" className="m-0 p-0 object-cover" />
         </div>
       </div>
 

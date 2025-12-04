@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import {
+  bgDesgin02,
   diversity4,
   healthCross,
   highQualityImg,
@@ -51,80 +52,94 @@ function LandingPartTwo() {
 
       {/* Quality Section */}
 
-      <div className="bg-[#DDFFDB] py-28 px-10">
-        <div className="grid md:grid-cols-2 gap-x-20 gap-y-10 mb-20">
-          <div>
-            <p>Quality</p>
-            <p className="text-2xl md:text-5xl mt-4">
-              Why Choose Greenlife Pharmaceuticals?
-            </p>
-          </div>
-
-          <div>
-            At Greenlife Pharmaceuticals, we prioritize your health with our
-            trusted products. Our commitment to quality ensures that you receive
-            the best pharmaceutical solutions. Join us in making healthcare
-            accessible for everyone.
-          </div>
+      <div className="bg-[#DDFFDB]">
+        <div>
+          <img src={bgDesgin02} alt="" className="m-0 p-0 object-cover" />
         </div>
 
-        {/* Quality second Section */}
-        <div className="grid md:grid-cols-3 gap-x-12 gap-y-10 mb-20">
-          <div className=" text-center md:text-start">
+        <div className="py-28 px-10">
+          <div className="grid md:grid-cols-2 gap-x-20 gap-y-10 mb-20">
             <div>
-              <img src={highQualityImg} alt="" className="mx-auto md:mx-0" />
+              <p>Quality</p>
+              <p className="text-2xl md:text-5xl mt-4">
+                Why Choose Greenlife Pharmaceuticals?
+              </p>
             </div>
 
-            <p className="text-3xl my-6">Certified and Trusted by Experts</p>
-            <p>We are WHO Certified, ensuring the highest standards.</p>
+            <div>
+              At Greenlife Pharmaceuticals, we prioritize your health with our
+              trusted products. Our commitment to quality ensures that you
+              receive the best pharmaceutical solutions. Join us in making
+              healthcare accessible for everyone.
+            </div>
           </div>
 
-          <div className=" text-center md:text-start">
-            <div>
-              <img src={healthCross} alt="" className="mx-auto md:mx-0" />
+          {/* Quality second Section */}
+          <div className="grid md:grid-cols-3 gap-x-12 gap-y-10 mb-20">
+            <div className=" text-center md:text-start">
+              <div>
+                <img src={highQualityImg} alt="" className="mx-auto md:mx-0" />
+              </div>
+
+              <p className="text-3xl my-6">Certified and Trusted by Experts</p>
+              <p>We are WHO Certified, ensuring the highest standards.</p>
             </div>
 
-            <p className="text-3xl my-6">
-              Global Partnerships for Better Healthcare
-            </p>
-            <p>We collaborate with leading organizations worldwide.</p>
-          </div>
+            <div className=" text-center md:text-start">
+              <div>
+                <img src={healthCross} alt="" className="mx-auto md:mx-0" />
+              </div>
 
-          <div className=" text-center md:text-start">
-            <div>
-              <img src={diversity4} alt="" className="mx-auto md:mx-0" />
+              <p className="text-3xl my-6">
+                Global Partnerships for Better Healthcare
+              </p>
+              <p>We collaborate with leading organizations worldwide.</p>
             </div>
 
-            <p className="text-3xl my-6 text-center md:text-start">
-              A Diverse Range of Over 100 Products
-            </p>
-            <p>Explore our extensive product lineup tailored to your needs.</p>
+            <div className=" text-center md:text-start">
+              <div>
+                <img src={diversity4} alt="" className="mx-auto md:mx-0" />
+              </div>
+
+              <p className="text-3xl my-6 text-center md:text-start">
+                A Diverse Range of Over 100 Products
+              </p>
+              <p>
+                Explore our extensive product lineup tailored to your needs.
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Quality Third Section */}
+          {/* Quality Third Section */}
 
-        <div className="grid md:grid-cols-2 gap-y-10">
-          <div className=" text-center md:text-start">
-            <p className="text-4xl mb-6">Join Us in Healthcare Access</p>
-            <p>Together, we can improve lives through accessible healthcare.</p>
-          </div>
+          <div className="grid md:grid-cols-2 gap-y-10">
+            <div className=" text-center md:text-start">
+              <p className="text-4xl mb-6">Join Us in Healthcare Access</p>
+              <p>
+                Together, we can improve lives through accessible healthcare.
+              </p>
+            </div>
 
-          <div>
-            <div className="h-full flex justify-center  items-center gap-x-4">
-              {/* <Link to="/contact">
+            <div>
+              <div className="h-full flex justify-center  items-center gap-x-4">
+                {/* <Link to="/contact">
                 <button className="text-[#DDFFDB] py-2.5 px-6 rounded-md bg-[#1E1E1E] border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">
                   Become a Vendor
                 </button>
               </Link> */}
 
-              <Link to="/about">
-                <button className="py-2.5 px-6 rounded-md border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">
-                  Learn More
-                </button>
-              </Link>
+                <Link to="/about">
+                  <button className="py-2.5 px-6 rounded-md border-[#1E1E1E] border-t-2 border-b-4 border-x-2 cursor-pointer">
+                    Learn More
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div>
+          <img src={bgDesgin02} alt="" className="m-0 p-0 object-cover" />
         </div>
       </div>
     </>
