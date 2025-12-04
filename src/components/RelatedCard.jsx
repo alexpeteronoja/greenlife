@@ -1,0 +1,59 @@
+import { useNavigate } from 'react-router-dom';
+import ProductData from '../data/ProductData';
+
+function RelatedCard({ product }) {
+  const navigate = useNavigate();
+  return (
+    <>
+      <div>
+        <div className=" h-full border border-[#EBEBEA] rounded-lg shadow-[0_0_2px_0_#171a1f1f,0_0_1px_0_#171a1f12]">
+          <div className="relative">
+            <img
+              src={product.image}
+              alt=""
+              className="object-cover w-full h-full rounded-t-lg max-h-[192px] bg-[#F9FAFB] p-6"
+            />
+
+            {/* Best Seller */}
+            {product.bestSeller && (
+              <div className="absolute top-[-8px] left-0 bg-[#E8618C] py-0.5 px-3 inline rounded-[6px] text-white text-xs font-medium">
+                Best Seller
+              </div>
+            )}
+
+            {/* New Product */}
+            {product.newProduct && (
+              <div className="absolute top-[-8px] right-0 bg-[#12BA09] py-0.5 px-3 inline rounded-[6px] text-white text-xs font-medium">
+                New
+              </div>
+            )}
+          </div>
+
+          <div className="p-5">
+            <p className="md:text-lg font-semibold mt-0.5">{product.title}</p>
+            <p>{product.description}</p>
+            {/* <p className="text-[#12BA09] text-xl md:text-2xl font-bold mt-2.5">
+              ₦ {product.price.toLocaleString('en-Ng')}
+            </p> */}
+
+            <div className="mt-4 flex flex-col xl:flex-row justify-between items-center gap-4">
+              {/* <button className="py-2.5 px-4 w-full  rounded-[10px] border text-sm border-[#12BA09] text-[#12BA09] whitespace-nowrap">
+              Buy Now
+            </button> */}
+
+              <button
+                onClick={() => navigate(`/product/${product.id}`)}
+                className="flex items-center w-full  justify-center gap-x-2.5 text-sm py-2.5 px-4 rounded-[10px] bg-[#F3F4F6]  cursor-pointer"
+              >
+                {/* <img src={buttoncart} alt="" className="hidden md:block" /> */}
+                <span className="text-sm whitespace-nowrap">View Details</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default RelatedCard;

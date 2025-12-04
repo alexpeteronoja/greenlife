@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import ProductData from '../data/ProductData';
-import ProductCard from '../components/ProductCard';
 import {
   downloadIcon,
   naturalSources,
@@ -10,6 +9,7 @@ import {
   shareIcon2,
   thirdPartyTested,
 } from '../assets';
+import RelatedCard from '../components/RelatedCard';
 
 function ProductItem() {
   const { id } = useParams();
@@ -144,68 +144,109 @@ function ProductItem() {
           </div>
         </div>
 
-        <div className=" grid grid-cols-3 gap-x-8 mt-11 mx-5 md:mx-10 pt-8 border-y border-y-[#E5E7EB]">
-          <div>
-            <img
-              src={qualityAssured}
-              alt=""
-              className="bg-[#12BA091A] rounded-[14px] p-3"
-            />
+        <div className="mt-11 mx-5 md:mx-10 pt-8 border-y border-y-[#E5E7EB]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center sm:text-start gap-8">
+            <div>
+              <img
+                src={qualityAssured}
+                alt=""
+                className="bg-[#12BA091A] rounded-[14px] p-3 mx-auto sm:mx-0"
+              />
 
-            <p className="text-xl mt-4">Quality Assured</p>
+              <p className="text-xl mt-4">Quality Assured</p>
 
-            <p className="mt-1.5">
-              Manufactured in FDA-approved facilities with rigorous quality
-              control standards.
-            </p>
+              <p className="mt-1.5">
+                Manufactured in FDA-approved facilities with rigorous quality
+                control standards.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src={thirdPartyTested}
+                alt=""
+                className="bg-[#EFF6FF] rounded-[14px] p-3 mx-auto sm:mx-0"
+              />
+
+              <p className="text-xl mt-4">Third-Party Tested</p>
+
+              <p className="mt-1.5">
+                Independent laboratory testing ensures purity and potency of all
+                ingredients.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src={naturalSources}
+                alt=""
+                className="bg-[#12BA091A] rounded-[14px] p-3 mx-auto sm:mx-0"
+              />
+
+              <p className="text-xl mt-4">Natural Sources</p>
+
+              <p className="mt-1.5">
+                Sourced from premium natural ingredients with minimal processing
+                for maximum efficacy.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <img
-              src={thirdPartyTested}
-              alt=""
-              className="bg-[#EFF6FF] rounded-[14px] p-3"
-            />
+          <div className="bg-[#F9FAFB] rounded-2xl p-8 my-14 w-full">
+            <h2 className="text-2xl">Safety Information</h2>
 
-            <p className="text-xl mt-4">Third-Party Tested</p>
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-[#101828]">Storage</h3>
 
-            <p className="mt-1.5">
-              Independent laboratory testing ensures purity and potency of all
-              ingredients.
-            </p>
-          </div>
+                <p className="text-[#364153] mt-2">
+                  Store in a cool, dry place away from direct sunlight. Keep out
+                  of reach of children.
+                </p>
+              </div>
 
-          <div>
-            <img
-              src={naturalSources}
-              alt=""
-              className="bg-[#12BA091A] rounded-[14px] p-3"
-            />
+              <div>
+                <h3 className="text-[#101828]">Warnings</h3>
 
-            <p className="text-xl mt-4">Natural Sources</p>
+                <p className="text-[#364153] mt-2">
+                  Do not exceed recommended dose. Consult your doctor if you
+                  have any medical conditions.
+                </p>
+              </div>
 
-            <p className="mt-1.5">
-              Sourced from premium natural ingredients with minimal processing
-              for maximum efficacy.
-            </p>
-          </div>
+              <div>
+                <h3 className="text-[#101828]">Allergen Information</h3>
 
-          <div className="bg-[#F9FAFB] p-8 ">
-            <h2>Safety Information</h2>
+                <p className="text-[#364153] mt-2">
+                  Check ingredient list carefully if you have known allergies.
+                  Manufactured in a facility that processes various allergens.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[#101828]">Expiration</h3>
+
+                <p className="text-[#364153] mt-2">
+                  Use before the expiration date printed on the package. Do not
+                  use if seal is broken.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Related Product */}
 
-        <div className="mt-12.5 md:mt-17.5 xl:mt-23 mx-3 md:mx-10">
-          <p className="mb-6 text-4xl text-center md:mb-9 xl:mb-11">
-            You may also like
-          </p>
+        <div className="mt-12 mx-3 md:mx-10">
+          <div className="mb-6 md:mb-9 xl:mb-11 flex flex-col md:flex-row gap-3 md:justify-between md:items-center">
+            <div className="text-3xl">Related Products</div>
+            <div className="text-[#12BA09]">View All Products →</div>
+          </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-center gap-7.5">
             {ProductData.slice(4, 8).map((item, index) => (
               <div key={index}>
-                <ProductCard product={item} />
+                <RelatedCard product={item} />
               </div>
             ))}
           </div>
