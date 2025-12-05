@@ -137,10 +137,6 @@ function LandingPartTwo() {
             </div>
           </div>
         </div>
-
-        <div>
-          <img src={bgDesgin02} alt="" className="m-0 p-0 object-cover" />
-        </div>
       </div>
     </>
   );
